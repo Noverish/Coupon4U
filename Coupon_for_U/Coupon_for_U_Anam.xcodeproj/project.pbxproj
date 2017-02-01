@@ -129,6 +129,7 @@
 		24AC383D1E26214100EEC55B /* Coupon_for_U_Anam */ = {
 			isa = PBXGroup;
 			children = (
+				2CBA54E71E41A29200B30687 /* CardInfoView */,
 				24AC383E1E26214100EEC55B /* AppDelegate.swift */,
 				24AC38401E26214100EEC55B /* ViewController.swift */,
 				24AC38421E26214100EEC55B /* Main.storyboard */,
@@ -182,6 +183,13 @@
 				ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CBA54E71E41A29200B30687 /* CardInfoView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CardInfoView;
 			sourceTree = "<group>";
 		};
 		71CE3637E8857BBA0D7B62BE /* Pods */ = {

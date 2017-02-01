@@ -29,7 +29,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
         var arr = [AnyObject]()
-        let xibName = ["CardA","CardB","CardC"]
+        let xibName = ["CardB","CardB","CardB"]
         
         for _ in 1...cardCount {
             let value = Int(arc4random_uniform(3))
@@ -41,23 +41,20 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func cardView(collectionView:UICollectionView,item:AnyObject,indexPath:IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item as! String, for: indexPath )
-        switch cell {
-        case let c as CardACell:
-            c.txtView.text = "Hello This is MMCardView ,Its a demo with different Card Type,This is a text type"
-        case let c as CardBCell:
-            let v = Int(arc4random_uniform(5))+1
-            c.imgV.image = UIImage.init(named: "image\(v)")
-        case let c as CardCCell:
-            c.clickCallBack {
-                if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Second") as? SecondViewController {
-                    vc.delegate = self
-                    self.card.presentViewController(to: vc)
-                }
-            }
-        default:
-            return UICollectionViewCell()
+        let c = cell as! CardBCell
+        if(c.coupon == nil) {
+            print(String(indexPath.row) + " - " + "nil");
             
+            let coupon = couponList[indexPath.row];
+            
+            c.imgV.image = UIImage.init(named: "14gram_background")
+            c.coupon = coupon
+            c.title.text = coupon.storeName;
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+        } else {
+            print(String(indexPath.row) + " - " + (c.coupon?.storeName)!);
         }
+
         return cell
     }
     
@@ -72,50 +69,43 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     @IBAction func filterAction () {
         let sheet = UIAlertController.init(title: "Filter", message: "Select you want to show in View", preferredStyle: .actionSheet)
         
-        let cellA = UIAlertAction(title: "CellA", style: .default, handler: {
+        let cellA = UIAlertAction(title: "1", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                return (obj as! String) == "CardA"
+                print(String(idex) + " : " + couponList[idex].storeName + ", " + String(couponList[idex].location == "1"))
+                return couponList[idex].location == "1"
             })
         })
         
-        let cellB = UIAlertAction(title: "CellB", style: .default, handler: {
+        let cellB = UIAlertAction(title: "2", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             
             self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                return (obj as! String) == "CardB"
+                print(String(idex) + " : " + couponList[idex].storeName + ", " + String(couponList[idex].location == "2"))
+                return couponList[idex].location == "2"
             })
         })
         
-        let cellC = UIAlertAction(title: "CellC", style: .default, handler: {
+        let cellC = UIAlertAction(title: "3", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                return (obj as! String) == "CardC"
-            })
-        })
-        let ac = ["CardA","CardC"]
-        let cellAC = UIAlertAction(title: "CellA,CellC", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            
-            
-            self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                return ac.contains(obj as! String)
+                print(String(idex) + " : " + couponList[idex].storeName + ", " + String(couponList[idex].location == "3"))
+                return couponList[idex].location == "3"
             })
         })
         
-        let allCell = UIAlertAction(title: "CellAll", style: .default, handler: {
+        let allCell = UIAlertAction(title: "모두 보기", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.card.showAllData()
         })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: {
             (alert: UIAlertAction!) -> Void in
         })
         
         sheet.addAction(cellA)
         sheet.addAction(cellB)
         sheet.addAction(cellC)
-        sheet.addAction(cellAC)
-        
         sheet.addAction(allCell)
         sheet.addAction(cancelAction)
         self.present(sheet, animated: true, completion: nil)

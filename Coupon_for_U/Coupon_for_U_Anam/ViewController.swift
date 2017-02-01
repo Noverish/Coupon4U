@@ -15,7 +15,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         super.viewDidLoad()
         
         card.registerCardCell(c: CardACell.classForCoder(), nib: UINib.init(nibName: "CardACell", bundle: nil))
-        card.registerCardCell(c: CardBCell.classForCoder(), nib: UINib.init(nibName: "CardBCell", bundle: nil))
+        card.registerCardCell(c: AnoukCard.classForCoder(), nib: UINib.init(nibName: "AnoukCard", bundle: nil))
         card.registerCardCell(c: CardCCell.classForCoder(), nib: UINib.init(nibName: "CardCCell", bundle: nil))
         card.cardDataSource = self
         let arr = self.generateCardInfo(cardCount: 10)
@@ -29,7 +29,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
         var arr = [AnyObject]()
-        let xibName = ["CardB","CardB","CardB"]
+        let xibName = ["Anouk","Anouk","Anouk"]
         
         for _ in 1...cardCount {
             let value = Int(arc4random_uniform(3))
@@ -41,7 +41,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func cardView(collectionView:UICollectionView,item:AnyObject,indexPath:IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item as! String, for: indexPath )
-        let c = cell as! CardBCell
+        let c = cell as! AnoukCard
         if(c.coupon == nil) {
             print(String(indexPath.row) + " - " + "nil");
             

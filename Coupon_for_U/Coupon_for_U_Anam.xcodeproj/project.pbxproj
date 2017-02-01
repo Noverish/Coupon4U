@@ -24,6 +24,13 @@
 		24AC38C81E277A4600EEC55B /* NavigationControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC38B91E277A4600EEC55B /* NavigationControllers.swift */; };
 		24AC38C91E277A4600EEC55B /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC38BA1E277A4600EEC55B /* RecordButton.swift */; };
 		24AC38CA1E277A4600EEC55B /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC38BB1E277A4600EEC55B /* UIViewController+Navigation.swift */; };
+		2C51FD2D1E41A60700D68B88 /* CardACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51FD2C1E41A60700D68B88 /* CardACell.swift */; };
+		2C51FD331E41A61C00D68B88 /* CardACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C51FD2E1E41A61C00D68B88 /* CardACell.xib */; };
+		2C51FD341E41A61C00D68B88 /* CardBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51FD2F1E41A61C00D68B88 /* CardBCell.swift */; };
+		2C51FD351E41A61C00D68B88 /* CardBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C51FD301E41A61C00D68B88 /* CardBCell.xib */; };
+		2C51FD361E41A61C00D68B88 /* CardCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51FD311E41A61C00D68B88 /* CardCCell.swift */; };
+		2C51FD371E41A61C00D68B88 /* CardCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C51FD321E41A61C00D68B88 /* CardCCell.xib */; };
+		2C51FD391E41A62500D68B88 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51FD381E41A62500D68B88 /* SecondViewController.swift */; };
 		2C7103061E372A3000AC46BD /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7103051E372A3000AC46BD /* CouponTableViewController.swift */; };
 		2C7103081E372A4D00AC46BD /* CouponDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7103071E372A4D00AC46BD /* CouponDatabase.swift */; };
 		38C586DE7D5C4D2AA39F11F2 /* Pods_Coupon_for_U_Anam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */; };
@@ -71,6 +78,13 @@
 		24AC38B91E277A4600EEC55B /* NavigationControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllers.swift; sourceTree = "<group>"; };
 		24AC38BA1E277A4600EEC55B /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		24AC38BB1E277A4600EEC55B /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		2C51FD2C1E41A60700D68B88 /* CardACell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardACell.swift; sourceTree = "<group>"; };
+		2C51FD2E1E41A61C00D68B88 /* CardACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardACell.xib; sourceTree = "<group>"; };
+		2C51FD2F1E41A61C00D68B88 /* CardBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBCell.swift; sourceTree = "<group>"; };
+		2C51FD301E41A61C00D68B88 /* CardBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBCell.xib; sourceTree = "<group>"; };
+		2C51FD311E41A61C00D68B88 /* CardCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCCell.swift; sourceTree = "<group>"; };
+		2C51FD321E41A61C00D68B88 /* CardCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCCell.xib; sourceTree = "<group>"; };
+		2C51FD381E41A62500D68B88 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2C7103051E372A3000AC46BD /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
 		2C7103071E372A4D00AC46BD /* CouponDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDatabase.swift; sourceTree = "<group>"; };
 		9D04700B46BFA52D88258DA4 /* Pods-Coupon_for_U_Anam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupon_for_U_Anam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coupon_for_U_Anam/Pods-Coupon_for_U_Anam.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +147,7 @@
 				24AC383E1E26214100EEC55B /* AppDelegate.swift */,
 				24AC38401E26214100EEC55B /* ViewController.swift */,
 				24AC38421E26214100EEC55B /* Main.storyboard */,
+				2C51FD381E41A62500D68B88 /* SecondViewController.swift */,
 				24AC38451E26214100EEC55B /* Assets.xcassets */,
 				24AC38471E26214100EEC55B /* LaunchScreen.storyboard */,
 				24AC384A1E26214100EEC55B /* Info.plist */,
@@ -188,6 +203,12 @@
 		2CBA54E71E41A29200B30687 /* CardInfoView */ = {
 			isa = PBXGroup;
 			children = (
+				2C51FD2C1E41A60700D68B88 /* CardACell.swift */,
+				2C51FD2E1E41A61C00D68B88 /* CardACell.xib */,
+				2C51FD2F1E41A61C00D68B88 /* CardBCell.swift */,
+				2C51FD301E41A61C00D68B88 /* CardBCell.xib */,
+				2C51FD311E41A61C00D68B88 /* CardCCell.swift */,
+				2C51FD321E41A61C00D68B88 /* CardCCell.xib */,
 			);
 			name = CardInfoView;
 			sourceTree = "<group>";
@@ -312,8 +333,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AC38491E26214100EEC55B /* LaunchScreen.storyboard in Resources */,
+				2C51FD331E41A61C00D68B88 /* CardACell.xib in Resources */,
 				24AC38461E26214100EEC55B /* Assets.xcassets in Resources */,
+				2C51FD351E41A61C00D68B88 /* CardBCell.xib in Resources */,
 				24AC38441E26214100EEC55B /* Main.storyboard in Resources */,
+				2C51FD371E41A61C00D68B88 /* CardCCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,13 +416,17 @@
 				24AC38C21E277A4600EEC55B /* CHControls.swift in Sources */,
 				24AC38411E26214100EEC55B /* ViewController.swift in Sources */,
 				24AC38C41E277A4600EEC55B /* CHPagingScrollViewController.swift in Sources */,
+				2C51FD341E41A61C00D68B88 /* CardBCell.swift in Sources */,
 				24AC38C11E277A4600EEC55B /* CHContentViewController.swift in Sources */,
 				24AC383F1E26214100EEC55B /* AppDelegate.swift in Sources */,
+				2C51FD361E41A61C00D68B88 /* CardCCell.swift in Sources */,
 				24AC38C91E277A4600EEC55B /* RecordButton.swift in Sources */,
 				24AC38CA1E277A4600EEC55B /* UIViewController+Navigation.swift in Sources */,
+				2C51FD391E41A62500D68B88 /* SecondViewController.swift in Sources */,
 				24AC38C81E277A4600EEC55B /* NavigationControllers.swift in Sources */,
 				2C7103061E372A3000AC46BD /* CouponTableViewController.swift in Sources */,
 				24AC38C31E277A4600EEC55B /* CHModalViewController.swift in Sources */,
+				2C51FD2D1E41A60700D68B88 /* CardACell.swift in Sources */,
 				24AC38C61E277A4600EEC55B /* DrawingCanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

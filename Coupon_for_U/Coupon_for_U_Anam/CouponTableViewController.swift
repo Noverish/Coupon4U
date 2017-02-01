@@ -94,14 +94,14 @@ class CouponTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let destVC = segue.destination as! ViewController
-        let selectedIndex = self.tableView.indexPathForSelectedRow?.row
-        let selected = couponList[selectedIndex!]
-        
-        destVC.storeName = selected.storeName
-        destVC.nowStamp = selected.nowStamp
-        destVC.maxStamp = selected.maxStamp
-        destVC.favorite = selected.favorite
+//        let destVC = segue.destination as! ViewController
+//        let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+//        let selected = couponList[selectedIndex!]
+//        
+//        destVC.storeName = selected.storeName
+//        destVC.nowStamp = selected.nowStamp
+//        destVC.maxStamp = selected.maxStamp
+//        destVC.favorite = selected.favorite
     }
  
 

@@ -11,6 +11,7 @@ import MMCardView
 
 class CardBCell: CardCell,CardCellProtocol {
 
+    var coupon:Coupon?
     @IBOutlet weak var imgV:UIImageView!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var title: UILabel!

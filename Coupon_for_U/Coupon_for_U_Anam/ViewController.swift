@@ -29,7 +29,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
         var arr = [AnyObject]()
-        let xibName = ["CardA","CardB","CardC"]
+        let xibName = ["CardB","CardB","CardB"]
         
         for _ in 1...cardCount {
             let value = Int(arc4random_uniform(3))
@@ -45,8 +45,12 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         case let c as CardACell:
             c.txtView.text = "Hello This is MMCardView ,Its a demo with different Card Type,This is a text type"
         case let c as CardBCell:
+            let coupon = couponList[indexPath.row];
+            
             let v = Int(arc4random_uniform(5))+1
             c.imgV.image = UIImage.init(named: "image\(v)")
+            c.title.text = coupon.storeName;
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
         case let c as CardCCell:
             c.clickCallBack {
                 if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Second") as? SecondViewController {

@@ -45,7 +45,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         if(c.coupon == nil) {
             print(String(indexPath.row) + " - " + "nil");
             
-            let coupon = couponList[indexPath.row];
+            let coupon = couponManager.coupons[indexPath.row];
             
             c.imgV.image = UIImage.init(named: "14gram_background")
             c.coupon = coupon
@@ -72,8 +72,8 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         let cellA = UIAlertAction(title: "1", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                print(String(idex) + " : " + couponList[idex].storeName + ", " + String(couponList[idex].location == "1"))
-                return couponList[idex].location == "1"
+                print(String(idex) + " : " + couponManager.coupons[idex].storeName + ", " + String(couponManager.coupons[idex].location == "1"))
+                return couponManager.coupons[idex].location == "1"
             })
         })
         
@@ -81,16 +81,16 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
             (alert: UIAlertAction!) -> Void in
             
             self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                print(String(idex) + " : " + couponList[idex].storeName + ", " + String(couponList[idex].location == "2"))
-                return couponList[idex].location == "2"
+                print(String(idex) + " : " + couponManager.coupons[idex].storeName + ", " + String(couponManager.coupons[idex].location == "2"))
+                return couponManager.coupons[idex].location == "2"
             })
         })
         
         let cellC = UIAlertAction(title: "3", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                print(String(idex) + " : " + couponList[idex].storeName + ", " + String(couponList[idex].location == "3"))
-                return couponList[idex].location == "3"
+                print(String(idex) + " : " + couponManager.coupons[idex].storeName + ", " + String(couponManager.coupons[idex].location == "3"))
+                return couponManager.coupons[idex].location == "3"
             })
         })
         

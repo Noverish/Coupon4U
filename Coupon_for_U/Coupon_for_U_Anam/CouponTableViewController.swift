@@ -34,7 +34,7 @@ class CouponTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return couponList.count
+        return couponManager.coupons.count
     }
 
     
@@ -42,7 +42,7 @@ class CouponTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
 
         // Configure the cell...
-        let coupon:Coupon = couponList[indexPath.row]
+        let coupon:Coupon = couponManager.coupons[indexPath.row]
         
         cell.textLabel?.text = coupon.storeName
         cell.detailTextLabel?.text = String(coupon.nowStamp)

@@ -9,12 +9,11 @@
 import UIKit
 import MMCardView
 
-class AnoukCard: CardCell,CardCellProtocol {
+class Express103Card: CardCell,CardCellProtocol {
 
     var coupon:Coupon?
     @IBOutlet weak var imgV:UIImageView!
     @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var title: UILabel!
     
     public static func cellIdentifier() -> String {
         return "Anouk"

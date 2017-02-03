@@ -14,8 +14,8 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        card.registerCardCell(c: CardACell.classForCoder(), nib: UINib.init(nibName: "CardACell", bundle: nil))
-        card.registerCardCell(c: AnoukCard.classForCoder(), nib: UINib.init(nibName: "AnoukCard", bundle: nil))
+        card.registerCardCell(c: Express103Card.classForCoder(), nib: UINib.init(nibName: "Express103Card", bundle: nil))
+        card.registerCardCell(c: Gram14Card.classForCoder(), nib: UINib.init(nibName: "Gram14Card", bundle: nil))
         card.registerCardCell(c: CardCCell.classForCoder(), nib: UINib.init(nibName: "CardCCell", bundle: nil))
         card.cardDataSource = self
         let arr = self.generateCardInfo(cardCount: 10)
@@ -29,10 +29,10 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
         var arr = [AnyObject]()
-        let xibName = ["Anouk","Anouk","Anouk"]
+        let xibName = ["Anouk","Gram14"]
         
         for _ in 1...cardCount {
-            let value = Int(arc4random_uniform(3))
+            let value = Int(arc4random_uniform(UInt32(xibName.count)))
             arr.append(xibName[value] as AnyObject)
         }
         
@@ -41,20 +41,20 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func cardView(collectionView:UICollectionView,item:AnyObject,indexPath:IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: item as! String, for: indexPath )
-        let c = cell as! AnoukCard
-        if(c.coupon == nil) {
-            print(String(indexPath.row) + " - " + "nil");
-            
-            let coupon = couponManager.coupons[indexPath.row];
-            
-            c.imgV.image = UIImage.init(named: "14gram_background")
-            c.coupon = coupon
-            c.title.text = coupon.storeName;
-            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
-        } else {
-            print(String(indexPath.row) + " - " + (c.coupon?.storeName)!);
-        }
+        let coupon = couponManager.coupons[indexPath.row];
 
+        switch cell {
+        case let c as Gram14Card:
+            c.coupon = coupon
+            c.status.text = "1/10"
+        case let c as Express103Card:
+            c.coupon = coupon
+            c.status.text = "2/10"
+        default:
+            return UICollectionViewCell()
+            
+        }
+        
         return cell
     }
     

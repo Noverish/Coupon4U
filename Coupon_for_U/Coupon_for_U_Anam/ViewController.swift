@@ -49,6 +49,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         case let c as Gram14Card:
             c.coupon = coupon
             c.status.text = "1/10"
+            c.delegate = self
         case let c as Express103Card:
             c.coupon = coupon
             c.status.text = "2/10"
@@ -56,12 +57,15 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         case let c as Do58Card:
             c.coupon = coupon
             c.status.text = "3/10"
+            c.delegate = self
         case let c as DearBreadCard:
             c.coupon = coupon
             c.status.text = "4/10"
+            c.delegate = self
         case let c as CafeDeNataCard:
             c.coupon = coupon
             c.status.text = "5/10"
+            c.delegate = self
         default:
             return UICollectionViewCell()
             

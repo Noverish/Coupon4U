@@ -10,8 +10,8 @@ import UIKit
 import MMCardView
 
 class Do58Card: CardCell,CardCellProtocol {
-
     var coupon:Coupon?
+    var delegate:DeleteDelegate?
     @IBOutlet weak var imgV:UIImageView!
     @IBOutlet weak var status: UILabel!
     
@@ -19,6 +19,10 @@ class Do58Card: CardCell,CardCellProtocol {
         return "Do58"
     }
 
+    @IBAction func clickAction(){
+        delegate?.delete()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         imgV.layer.cornerRadius = 8.0

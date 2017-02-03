@@ -10,15 +10,18 @@ import UIKit
 import MMCardView
 
 class DearBreadCard: CardCell,CardCellProtocol {
-
     var coupon:Coupon?
+    var delegate:DeleteDelegate?
     @IBOutlet weak var imgV:UIImageView!
     @IBOutlet weak var status: UILabel!
     
     public static func cellIdentifier() -> String {
         return "DearBread"
     }
-
+    
+    @IBAction func clickAction() {
+        delegate?.delete()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         imgV.layer.cornerRadius = 8.0

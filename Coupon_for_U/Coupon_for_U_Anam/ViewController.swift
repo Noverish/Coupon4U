@@ -16,7 +16,8 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         
         card.registerCardCell(c: Express103Card.classForCoder(), nib: UINib.init(nibName: "Express103Card", bundle: nil))
         card.registerCardCell(c: Gram14Card.classForCoder(), nib: UINib.init(nibName: "Gram14Card", bundle: nil))
-        card.registerCardCell(c: CardCCell.classForCoder(), nib: UINib.init(nibName: "CardCCell", bundle: nil))
+        card.registerCardCell(c: Do58Card.classForCoder(), nib: UINib.init(nibName: "Do58Card", bundle: nil))
+        card.registerCardCell(c: DearBreadCard.classForCoder(), nib: UINib.init(nibName: "DearBreadCard", bundle: nil))
         card.cardDataSource = self
         let arr = self.generateCardInfo(cardCount: 10)
         card.set(cards: arr)
@@ -29,7 +30,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
         var arr = [AnyObject]()
-        let xibName = ["Anouk","Gram14"]
+        let xibName = ["Anouk","Gram14", "Do58", "DearBread"]
         
         for _ in 1...cardCount {
             let value = Int(arc4random_uniform(UInt32(xibName.count)))
@@ -50,6 +51,12 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         case let c as Express103Card:
             c.coupon = coupon
             c.status.text = "2/10"
+        case let c as Do58Card:
+            c.coupon = coupon
+            c.status.text = "3/10"
+        case let c as DearBreadCard:
+            c.coupon = coupon
+            c.status.text = "4/10"
         default:
             return UICollectionViewCell()
             

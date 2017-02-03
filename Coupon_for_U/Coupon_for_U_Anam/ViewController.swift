@@ -8,7 +8,7 @@
 
 import UIKit
 import MMCardView
-class ViewController: UIViewController, CardCollectionViewDataSource {
+class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDelegate {
     
     @IBOutlet weak var card:CardView!
     override func viewDidLoad() {
@@ -52,6 +52,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         case let c as Express103Card:
             c.coupon = coupon
             c.status.text = "2/10"
+            c.delegate = self
         case let c as Do58Card:
             c.coupon = coupon
             c.status.text = "3/10"
@@ -126,10 +127,18 @@ class ViewController: UIViewController, CardCollectionViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func delete() {
+        card.removeSelectCard()
+    }
 }
 
 extension ViewController:SecondViewProtocol {
     func removeCard() {
         card.removeSelectCard()
     }
+}
+
+protocol DeleteDelegate: class {
+    func delete()
 }

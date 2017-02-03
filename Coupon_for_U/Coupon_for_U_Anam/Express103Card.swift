@@ -12,11 +12,16 @@ import MMCardView
 class Express103Card: CardCell,CardCellProtocol {
 
     var coupon:Coupon?
+    var delegate:DeleteDelegate?
     @IBOutlet weak var imgV:UIImageView!
     @IBOutlet weak var status: UILabel!
     
     public static func cellIdentifier() -> String {
         return "Express103"
+    }
+    
+    @IBAction func clickAction() {
+        delegate?.delete()
     }
 
     override func awakeFromNib() {

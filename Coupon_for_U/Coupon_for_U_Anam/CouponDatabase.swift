@@ -32,35 +32,51 @@ class CouponManager {
     }
     
     func defaultData() -> Array<Coupon> {
-        let rewardHyphen:[Int:String] = [12: "Free Drink"]
-        let rewardAnouk:[Int:String] = [10: "Free Drink"]
-        let rewardMoirita:[Int:String] = [6: "아이스티 한 잔", 12: "에이드 두 잔"]
-        let rewardDeChocolate:[Int:String] = [12: "아메리카노"]
-        let rewardSandPresso:[Int:String] = [12: "Free Drink"]
-        let reward103Express:[Int:String] = [10: "Free Coffee"]
-        let rewardHandsomeBagle:[Int:String] = [10: "Free Bagle"]
-        let rewardCaffeMotungi:[Int:String] = [10: "아메리카노 1잔 또는 2500원 할인"]
-        let reward14gram:[Int:String] = [7: "Free Drink", 14:"Free Drink"]
-        let rewardDearBread:[Int:String] = [12: "5000원 할인"]
-        
-        let couponHyphen = Coupon(nowStamp: 2, maxStamp: 12, storeName: "Hyphen", checklist: rewardHyphen, location: "1")
-        let couponAnouk = Coupon(nowStamp: 2, maxStamp: 10, storeName: "Anouk", checklist: rewardAnouk, location: "2")
-        let couponMoirita = Coupon(nowStamp: 2, maxStamp: 12, storeName: "Moirita", checklist: rewardMoirita, location: "3")
-        let couponSandPresso = Coupon(nowStamp: 8, maxStamp: 12, storeName: "SandPresso", checklist: rewardSandPresso, location: "2")
-        let coupon103Express = Coupon(nowStamp: 6, maxStamp: 10, storeName: "103Express", checklist: reward103Express, location: "3")
-        let couponHandsomeBagle = Coupon(nowStamp: 1, maxStamp: 10, storeName: "핸썸 베이글", checklist: rewardHandsomeBagle, location: "1")
-        let couponCaffeMotungi = Coupon(nowStamp: 2, maxStamp: 10, storeName: "카페 모퉁이", checklist: rewardCaffeMotungi, location: "2")
-        let coupon14gram = Coupon(nowStamp: 4, maxStamp: 14, storeName: "14gram", checklist: reward14gram, location: "3")
-        let couponDearBread = Coupon(nowStamp: 6, maxStamp: 12, storeName: "DEAR BREAD", checklist: rewardDearBread, location: "1")
-        let couponDeChocolate = Coupon(nowStamp: 3, maxStamp: 12, storeName: "De Chocolate", checklist: rewardDeChocolate, dueDate: "2016-10-21", location: "2")
-        
-        let couponList:[Coupon] = [couponHyphen, couponAnouk, couponMoirita, couponSandPresso, coupon103Express, couponHandsomeBagle, couponCaffeMotungi, coupon14gram, couponDearBread, couponDeChocolate]
+        let couponList:[Coupon] = [
+            getTemplate(storeName: "Hyphen"),
+            getTemplate(storeName: "Anouk"),
+            getTemplate(storeName: "Moirita"),
+            getTemplate(storeName: "SandPresso"),
+            getTemplate(storeName: "103Express"),
+            getTemplate(storeName: "HandsomeBagle"),
+            getTemplate(storeName: "CaffeMotungi"),
+            getTemplate(storeName: "14gram"),
+            getTemplate(storeName: "DearBread"),
+            getTemplate(storeName: "DeChocolate")
+        ]
         
         return couponList
     }
     
     func save(){
         NSKeyedArchiver.archiveRootObject(self.coupons, toFile: self.filePath)
+    }
+    
+    func getTemplate(storeName:String) -> Coupon {
+        switch storeName {
+        case "Hyphen":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Hyphen", checklist: [12: "Free Drink"], location: "1")
+        case "Anouk":
+            return Coupon(nowStamp: 0, maxStamp: 10, storeName: "Anouk", checklist: [10: "Free Drink"], location: "2")
+        case "Moirita":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Moirita", checklist: [6: "아이스티 한 잔", 12: "에이드 두 잔"], location: "3")
+        case "SandPresso":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "SandPresso", checklist: [12: "Free Drink"], location: "2")
+        case "103Express":
+            return Coupon(nowStamp: 0, maxStamp: 10, storeName: "103Express", checklist: [10: "Free Coffee"], location: "3")
+        case "HandsomeBagle":
+            return Coupon(nowStamp: 0, maxStamp: 10, storeName: "핸썸 베이글", checklist: [10: "Free Bagle"], location: "1")
+        case "CaffeMotungi":
+            return Coupon(nowStamp: 0, maxStamp: 10, storeName: "카페 모퉁이", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "2")
+        case "14gram":
+            return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "3")
+        case "DearBread":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "1")
+        case "DeChocolate":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "2")
+        default:
+            return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "2")
+        }
     }
 }
 

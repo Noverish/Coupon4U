@@ -16,7 +16,7 @@ class Gram14Card: CardCell,CardCellProtocol {
     @IBOutlet weak var status: UILabel!
     
     public static func cellIdentifier() -> String {
-        return "Gram14"
+        return "14gram"
     }
 
     @IBAction func clickAction(){

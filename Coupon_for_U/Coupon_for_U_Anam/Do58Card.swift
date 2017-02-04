@@ -16,7 +16,7 @@ class Do58Card: CardCell,CardCellProtocol {
     @IBOutlet weak var status: UILabel!
     
     public static func cellIdentifier() -> String {
-        return "Do58"
+        return "58도씨"
     }
 
     @IBAction func clickAction(){

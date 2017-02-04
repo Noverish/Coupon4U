@@ -34,7 +34,7 @@ class CouponTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return couponManager.coupons.count
+        return couponManager.couponTemplates.count
     }
 
     
@@ -42,14 +42,24 @@ class CouponTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
 
         // Configure the cell...
-        let coupon:Coupon = couponManager.coupons[indexPath.row]
+        let coupon:Coupon = couponManager.couponTemplates[indexPath.row]
         
         cell.textLabel?.text = coupon.storeName
-        cell.detailTextLabel?.text = String(coupon.nowStamp)
+        cell.detailTextLabel?.text = String(coupon.maxStamp)
         
         return cell
     }
- 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("section: \(indexPath.section)")
+        print("row: \(indexPath.row)")
+        print("coupon \(couponManager.coupons.count)")
+        let coupon:Coupon = couponManager.couponTemplates[indexPath.row]
+        couponManager.coupons.append(couponManager.getTemplate(storeName: coupon.storeName))
+        
+        print("coupon \(couponManager.coupons.count)")
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,15 +104,6 @@ class CouponTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-//        let destVC = segue.destination as! ViewController
-//        let selectedIndex = self.tableView.indexPathForSelectedRow?.row
-//        let selected = couponList[selectedIndex!]
-//        
-//        destVC.storeName = selected.storeName
-//        destVC.nowStamp = selected.nowStamp
-//        destVC.maxStamp = selected.maxStamp
-//        destVC.favorite = selected.favorite
+        
     }
- 
-
 }

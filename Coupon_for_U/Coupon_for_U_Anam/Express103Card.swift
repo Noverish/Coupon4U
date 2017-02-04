@@ -17,7 +17,7 @@ class Express103Card: CardCell,CardCellProtocol {
     @IBOutlet weak var status: UILabel!
     
     public static func cellIdentifier() -> String {
-        return "Express103"
+        return "103Express"
     }
     
     @IBAction func clickAction() {

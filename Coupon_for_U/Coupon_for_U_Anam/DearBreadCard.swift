@@ -16,7 +16,7 @@ class DearBreadCard: CardCell,CardCellProtocol {
     @IBOutlet weak var status: UILabel!
     
     public static func cellIdentifier() -> String {
-        return "DearBread"
+        return "DEAR BREAD"
     }
     
     @IBAction func clickAction() {

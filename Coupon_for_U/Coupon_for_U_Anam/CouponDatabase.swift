@@ -13,6 +13,7 @@ let fileName = "BranchData.brch"
 
 class CouponManager {
     var coupons:[Coupon] = []
+    var couponTemplates:[Coupon] = []
     
     var filePath:String { get{
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -29,20 +30,30 @@ class CouponManager {
             //create
             coupons += defaultData()
         }
-    }
-    
-    func defaultData() -> Array<Coupon> {
-        let couponList:[Coupon] = [
+        
+        couponTemplates = [
             getTemplate(storeName: "Hyphen"),
             getTemplate(storeName: "Anouk"),
             getTemplate(storeName: "Moirita"),
             getTemplate(storeName: "SandPresso"),
             getTemplate(storeName: "103Express"),
-            getTemplate(storeName: "HandsomeBagle"),
-            getTemplate(storeName: "CaffeMotungi"),
+            getTemplate(storeName: "핸썸 베이글"),
+            getTemplate(storeName: "카페 모퉁이"),
             getTemplate(storeName: "14gram"),
-            getTemplate(storeName: "DearBread"),
-            getTemplate(storeName: "DeChocolate")
+            getTemplate(storeName: "DEAR BREAD"),
+            getTemplate(storeName: "De Chocolate"),
+            getTemplate(storeName: "58도씨"),
+            getTemplate(storeName: "cafe de nata")
+        ]
+    }
+    
+    func defaultData() -> Array<Coupon> {
+        let couponList:[Coupon] = [
+            getTemplate(storeName: "103Express"),
+            getTemplate(storeName: "cafe de nata"),
+            getTemplate(storeName: "DEAR BREAD"),
+            getTemplate(storeName: "58도씨"),
+            getTemplate(storeName: "14gram")
         ]
         
         return couponList
@@ -64,16 +75,20 @@ class CouponManager {
             return Coupon(nowStamp: 0, maxStamp: 12, storeName: "SandPresso", checklist: [12: "Free Drink"], location: "2")
         case "103Express":
             return Coupon(nowStamp: 0, maxStamp: 10, storeName: "103Express", checklist: [10: "Free Coffee"], location: "3")
-        case "HandsomeBagle":
+        case "핸썸 베이글":
             return Coupon(nowStamp: 0, maxStamp: 10, storeName: "핸썸 베이글", checklist: [10: "Free Bagle"], location: "1")
-        case "CaffeMotungi":
+        case "카페 모퉁이":
             return Coupon(nowStamp: 0, maxStamp: 10, storeName: "카페 모퉁이", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "2")
         case "14gram":
             return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "3")
-        case "DearBread":
+        case "DEAR BREAD":
             return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "1")
-        case "DeChocolate":
+        case "De Chocolate":
             return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "2")
+        case "58도씨":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "58도씨", checklist: [6: "Free Drink", 12: "Free Drink"], location: "2")
+        case "cafe de nata":
+            return Coupon(nowStamp: 0, maxStamp: 12, storeName: "cafe de nata", checklist: [10: "Free Drink"], location: "2")
         default:
             return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "2")
         }

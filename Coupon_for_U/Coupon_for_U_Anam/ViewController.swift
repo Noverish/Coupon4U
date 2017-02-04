@@ -20,22 +20,16 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         card.registerCardCell(c: DearBreadCard.classForCoder(), nib: UINib.init(nibName: "DearBreadCard", bundle: nil))
         card.registerCardCell(c: CafeDeNataCard.classForCoder(), nib: UINib.init(nibName: "CafeDeNataCard", bundle: nil))
         card.cardDataSource = self
-        let arr = self.generateCardInfo(cardCount: 10)
-        card.set(cards: arr)
-        
-        self.card.showStyle(style: .cover)
-        
+        refresh()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
         var arr = [AnyObject]()
-        let xibName = ["Express103", "Gram14", "Do58", "DearBread", "CafeDeNata"]
         
-        for _ in 1...cardCount {
-            let value = Int(arc4random_uniform(UInt32(xibName.count)))
-            arr.append(xibName[value] as AnyObject)
+        for coupon in couponManager.coupons {
+            arr.append(coupon.storeName as AnyObject)
         }
         
         return arr
@@ -72,14 +66,6 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         }
         
         return cell
-    }
-    
-    @IBAction func segmentAction(seg:UISegmentedControl) {
-        if (seg.selectedSegmentIndex == 0) {
-            self.card.showStyle(style: .cover)
-        } else {
-            self.card.showStyle(style: .normal)
-        }
     }
     
     @IBAction func filterAction () {
@@ -130,6 +116,12 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func refresh() {
+        let arr = self.generateCardInfo(cardCount: couponManager.coupons.count)
+        card.set(cards: arr)
+        self.card.showStyle(style: .normal)
     }
     
     func delete() {

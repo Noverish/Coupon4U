@@ -333,7 +333,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="OpenCamera1"/>
                                 <connections>
-                                    <action selector="useCamera:" destination="53J-v6-fXm" eventType="touchUpInside" id="IrX-DT-A9F"/>
+                                    <action selector="useCamera:" destination="53J-v6-fXm" eventType="touchUpInside" id="VAt-4W-Tyx"/>
                                 </connections>
                             </button>
                         </subviews>

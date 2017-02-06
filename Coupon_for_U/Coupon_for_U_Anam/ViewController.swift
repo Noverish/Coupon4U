@@ -8,7 +8,7 @@
 
 import UIKit
 import MMCardView
-class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDelegate {
+class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var card:CardView!
     override func viewDidLoad() {
@@ -126,6 +126,21 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
     
     func delete() {
         card.removeSelectCard()
+    }
+    
+    @IBAction func useCamera(_ sender: AnyObject) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(
+            UIImagePickerControllerSourceType.camera) {
+            
+            let imagePicker = UIImagePickerController()
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.allowsEditing = true
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
 }
 

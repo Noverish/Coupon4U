@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gD2-KX-5Zi">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gD2-KX-5Zi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -325,13 +325,26 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8H-dt-mBr">
+                                <rect key="frame" x="294" y="586" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="KCe-cs-uZM"/>
+                                    <constraint firstAttribute="width" constant="65" id="kfs-Rj-Fcf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="OpenCamera1"/>
+                                <connections>
+                                    <action selector="useCamera:" destination="53J-v6-fXm" eventType="touchUpInside" id="IrX-DT-A9F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="XRU-VJ-88e" secondAttribute="trailing" constant="-16" id="4d7-7b-9RO"/>
+                            <constraint firstItem="DUV-3g-zoo" firstAttribute="top" secondItem="m8H-dt-mBr" secondAttribute="bottom" constant="16" id="72C-dz-W00"/>
                             <constraint firstItem="XRU-VJ-88e" firstAttribute="leading" secondItem="2QZ-1R-Fa0" secondAttribute="leadingMargin" constant="-16" id="F9C-Qx-Ekv"/>
                             <constraint firstItem="DUV-3g-zoo" firstAttribute="top" secondItem="XRU-VJ-88e" secondAttribute="bottom" id="aCN-mf-hUn"/>
                             <constraint firstItem="XRU-VJ-88e" firstAttribute="top" secondItem="BUM-eE-3v2" secondAttribute="bottom" id="eBu-Af-odF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8H-dt-mBr" secondAttribute="trailing" id="lyN-rz-fus"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Coupon4U" id="LBJ-lI-WPT">
@@ -456,6 +469,7 @@
         <image name="2017. 1. 5. 오후 5_11_49의 Scannable 문서 3" width="504" height="903"/>
         <image name="2017. 1. 5. 오후 5_22_18의 Scannable 문서" width="595" height="1071"/>
         <image name="2017. 1. 6. 오후 4_28_39의 영수증" width="593" height="1071"/>
+        <image name="OpenCamera1" width="512" height="512"/>
         <image name="paging_1" width="485" height="872"/>
     </resources>
     <inferredMetricsTieBreakers>

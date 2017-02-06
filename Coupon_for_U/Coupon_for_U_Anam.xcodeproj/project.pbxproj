@@ -43,6 +43,7 @@
 		2C51FD411E41D64C00D68B88 /* Express103Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C51FD401E41D64C00D68B88 /* Express103Card.xib */; };
 		2C7103061E372A3000AC46BD /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7103051E372A3000AC46BD /* CouponTableViewController.swift */; };
 		2C7103081E372A4D00AC46BD /* CouponDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7103071E372A4D00AC46BD /* CouponDatabase.swift */; };
+		2CD076341E486CD500CF1484 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD076331E486CD500CF1484 /* QRCodeViewController.swift */; };
 		38C586DE7D5C4D2AA39F11F2 /* Pods_Coupon_for_U_Anam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		2C51FD401E41D64C00D68B88 /* Express103Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Express103Card.xib; sourceTree = "<group>"; };
 		2C7103051E372A3000AC46BD /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
 		2C7103071E372A4D00AC46BD /* CouponDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDatabase.swift; sourceTree = "<group>"; };
+		2CD076331E486CD500CF1484 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = ../QRCodeViewController.swift; sourceTree = "<group>"; };
 		9D04700B46BFA52D88258DA4 /* Pods-Coupon_for_U_Anam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupon_for_U_Anam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coupon_for_U_Anam/Pods-Coupon_for_U_Anam.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coupon_for_U_Anam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 			children = (
 				2CBA54E71E41A29200B30687 /* CardInfoView */,
 				24AC383E1E26214100EEC55B /* AppDelegate.swift */,
+				2CD076331E486CD500CF1484 /* QRCodeViewController.swift */,
 				24AC38401E26214100EEC55B /* ViewController.swift */,
 				24AC38421E26214100EEC55B /* Main.storyboard */,
 				2C51FD381E41A62500D68B88 /* SecondViewController.swift */,
@@ -464,6 +467,7 @@
 				2C14FD9B1E445B00001B482F /* CafeDeNataCard.swift in Sources */,
 				24AC38C81E277A4600EEC55B /* NavigationControllers.swift in Sources */,
 				2C7103061E372A3000AC46BD /* CouponTableViewController.swift in Sources */,
+				2CD076341E486CD500CF1484 /* QRCodeViewController.swift in Sources */,
 				24AC38C31E277A4600EEC55B /* CHModalViewController.swift in Sources */,
 				2C14FD8F1E444A6C001B482F /* Gram14Card.swift in Sources */,
 				2C51FD2D1E41A60700D68B88 /* CardACell.swift in Sources */,

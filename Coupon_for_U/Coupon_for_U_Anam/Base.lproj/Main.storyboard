@@ -333,7 +333,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="OpenCamera1"/>
                                 <connections>
-                                    <action selector="useCamera:" destination="53J-v6-fXm" eventType="touchUpInside" id="VAt-4W-Tyx"/>
+                                    <segue destination="uVW-dc-Bna" kind="presentation" id="jKu-B2-meM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -378,6 +378,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8d-e8-7At" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1328.8" y="1068.215892053973"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="ZvJ-cN-gMD">
+            <objects>
+                <viewController id="uVW-dc-Bna" customClass="QRCodeViewController" customModule="Coupon_for_U_Anam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q8y-ks-B1X"/>
+                        <viewControllerLayoutGuide type="bottom" id="F9Q-eb-Ff9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6pb-LK-9Bi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZo-a3-2ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1329" y="1841"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="mPs-Oo-efH">

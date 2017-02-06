@@ -2,5 +2,6 @@ use_frameworks!
 target "Coupon_for_U_Anam" do
 
 pod 'MMCardView'
+pod 'SwiftQRCode'
 
 end

@@ -55,6 +55,17 @@ class CouponManager {
         return couponList
     }
     
+    func addStamp(stamp:Coupon) {
+        for coupon in coupons {
+            if(coupon.storeName == stamp.storeName) {
+                coupon.nowStamp += 1;
+                return
+            }
+        }
+        stamp.nowStamp = 1
+        coupons.append(stamp)
+    }
+    
     func save(){
         let success = NSKeyedArchiver.archiveRootObject(self.coupons, toFile: self.filePath)
         print(self.filePath)

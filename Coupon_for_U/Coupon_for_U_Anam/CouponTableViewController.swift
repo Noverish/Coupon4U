@@ -45,7 +45,7 @@ class CouponTableViewController: UITableViewController {
         let coupon:Coupon = couponManager.couponTemplates[indexPath.row]
         
         cell.textLabel?.text = coupon.storeName
-        cell.detailTextLabel?.text = String(coupon.maxStamp)
+        cell.detailTextLabel?.text = String(coupon.location)
         
         return cell
     }

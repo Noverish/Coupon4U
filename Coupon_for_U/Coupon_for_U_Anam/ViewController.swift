@@ -134,7 +134,9 @@ class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDele
     }
     
     func delete() {
-        card.removeSelectCard()
+        couponManager.coupons.remove(at: card.currentIdx())
+        couponManager.save()
+        card.removeSelectCard() //순서 중요! 항상 위의 remove보다 밑에 있어야 함!
     }
     
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {

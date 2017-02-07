@@ -18,6 +18,12 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         card.registerCardCell(c: Do58Card.classForCoder(), nib: UINib.init(nibName: "Do58Card", bundle: nil))
         card.registerCardCell(c: DearBreadCard.classForCoder(), nib: UINib.init(nibName: "DearBreadCard", bundle: nil))
         card.registerCardCell(c: CafeDeNataCard.classForCoder(), nib: UINib.init(nibName: "CafeDeNataCard", bundle: nil))
+        card.registerCardCell(c: HyphenCard.classForCoder(), nib: UINib.init(nibName: "HyphenCard", bundle: nil))
+        card.registerCardCell(c: MoiritaCard.classForCoder(), nib: UINib.init(nibName: "MoiritaCard", bundle: nil))
+        card.registerCardCell(c: SandPressoCard.classForCoder(), nib: UINib.init(nibName: "SandPressoCard", bundle: nil))
+        card.registerCardCell(c: HandsomeCard.classForCoder(), nib: UINib.init(nibName: "HandsomeCard", bundle: nil))
+        card.registerCardCell(c: CafeMotungiCard.classForCoder(), nib: UINib.init(nibName: "CafeMotungiCard", bundle: nil))
+        card.registerCardCell(c: CafeILLungoCard.classForCoder(), nib: UINib.init(nibName: "CafeILLungoCard", bundle: nil))
         card.cardDataSource = self
         refresh()
         
@@ -41,23 +47,47 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         switch cell {
         case let c as Gram14Card:
             c.coupon = coupon
-            c.status.text = "1/10"
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
         case let c as Express103Card:
             c.coupon = coupon
-            c.status.text = "2/10"
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
         case let c as Do58Card:
             c.coupon = coupon
-            c.status.text = "3/10"
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
         case let c as DearBreadCard:
             c.coupon = coupon
-            c.status.text = "4/10"
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
         case let c as CafeDeNataCard:
             c.coupon = coupon
-            c.status.text = "5/10"
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
+        case let c as HyphenCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
+        case let c as MoiritaCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
+        case let c as SandPressoCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
+        case let c as HandsomeCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
+        case let c as CafeMotungiCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
+        case let c as CafeILLungoCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
         default:
             return UICollectionViewCell()

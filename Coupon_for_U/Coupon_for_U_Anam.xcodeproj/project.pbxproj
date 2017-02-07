@@ -43,6 +43,18 @@
 		2C51FD411E41D64C00D68B88 /* Express103Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C51FD401E41D64C00D68B88 /* Express103Card.xib */; };
 		2C7103061E372A3000AC46BD /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7103051E372A3000AC46BD /* CouponTableViewController.swift */; };
 		2C7103081E372A4D00AC46BD /* CouponDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7103071E372A4D00AC46BD /* CouponDatabase.swift */; };
+		2C9F92EF1E497A9600FBFEFB /* HyphenCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F92EE1E497A9600FBFEFB /* HyphenCard.swift */; };
+		2C9F92F11E497A9D00FBFEFB /* HyphenCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F92F01E497A9D00FBFEFB /* HyphenCard.xib */; };
+		2C9F92F31E497C4E00FBFEFB /* MoiritaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F92F21E497C4E00FBFEFB /* MoiritaCard.swift */; };
+		2C9F92F51E497C5500FBFEFB /* MoiritaCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F92F41E497C5500FBFEFB /* MoiritaCard.xib */; };
+		2C9F92F71E497D3500FBFEFB /* SandPressoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F92F61E497D3500FBFEFB /* SandPressoCard.swift */; };
+		2C9F92F91E497D3C00FBFEFB /* SandPressoCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F92F81E497D3C00FBFEFB /* SandPressoCard.xib */; };
+		2C9F93011E4980E500FBFEFB /* HandsomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F93001E4980E500FBFEFB /* HandsomeCard.swift */; };
+		2C9F93031E4980ED00FBFEFB /* HandsomeCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F93021E4980ED00FBFEFB /* HandsomeCard.xib */; };
+		2C9F93091E49830300FBFEFB /* CafeMotungiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F93081E49830300FBFEFB /* CafeMotungiCard.swift */; };
+		2C9F930B1E49830800FBFEFB /* CafeMotungiCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F930A1E49830800FBFEFB /* CafeMotungiCard.xib */; };
+		2C9F930D1E49848200FBFEFB /* CafeILLungoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F930C1E49848200FBFEFB /* CafeILLungoCard.swift */; };
+		2C9F930F1E49848B00FBFEFB /* CafeILLungoCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F930E1E49848B00FBFEFB /* CafeILLungoCard.xib */; };
 		2CD076341E486CD500CF1484 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD076331E486CD500CF1484 /* QRCodeViewController.swift */; };
 		38C586DE7D5C4D2AA39F11F2 /* Pods_Coupon_for_U_Anam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +120,18 @@
 		2C51FD401E41D64C00D68B88 /* Express103Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Express103Card.xib; sourceTree = "<group>"; };
 		2C7103051E372A3000AC46BD /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
 		2C7103071E372A4D00AC46BD /* CouponDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponDatabase.swift; sourceTree = "<group>"; };
+		2C9F92EE1E497A9600FBFEFB /* HyphenCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyphenCard.swift; sourceTree = "<group>"; };
+		2C9F92F01E497A9D00FBFEFB /* HyphenCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HyphenCard.xib; sourceTree = "<group>"; };
+		2C9F92F21E497C4E00FBFEFB /* MoiritaCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoiritaCard.swift; sourceTree = "<group>"; };
+		2C9F92F41E497C5500FBFEFB /* MoiritaCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoiritaCard.xib; sourceTree = "<group>"; };
+		2C9F92F61E497D3500FBFEFB /* SandPressoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SandPressoCard.swift; sourceTree = "<group>"; };
+		2C9F92F81E497D3C00FBFEFB /* SandPressoCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SandPressoCard.xib; sourceTree = "<group>"; };
+		2C9F93001E4980E500FBFEFB /* HandsomeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandsomeCard.swift; sourceTree = "<group>"; };
+		2C9F93021E4980ED00FBFEFB /* HandsomeCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandsomeCard.xib; sourceTree = "<group>"; };
+		2C9F93081E49830300FBFEFB /* CafeMotungiCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeMotungiCard.swift; sourceTree = "<group>"; };
+		2C9F930A1E49830800FBFEFB /* CafeMotungiCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeMotungiCard.xib; sourceTree = "<group>"; };
+		2C9F930C1E49848200FBFEFB /* CafeILLungoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeILLungoCard.swift; sourceTree = "<group>"; };
+		2C9F930E1E49848B00FBFEFB /* CafeILLungoCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeILLungoCard.xib; sourceTree = "<group>"; };
 		2CD076331E486CD500CF1484 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = ../QRCodeViewController.swift; sourceTree = "<group>"; };
 		9D04700B46BFA52D88258DA4 /* Pods-Coupon_for_U_Anam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupon_for_U_Anam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coupon_for_U_Anam/Pods-Coupon_for_U_Anam.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coupon_for_U_Anam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,12 +252,24 @@
 			children = (
 				2C51FD3E1E41D64200D68B88 /* Express103Card.swift */,
 				2C51FD401E41D64C00D68B88 /* Express103Card.xib */,
+				2C9F93001E4980E500FBFEFB /* HandsomeCard.swift */,
+				2C9F93021E4980ED00FBFEFB /* HandsomeCard.xib */,
+				2C9F93081E49830300FBFEFB /* CafeMotungiCard.swift */,
+				2C9F930A1E49830800FBFEFB /* CafeMotungiCard.xib */,
+				2C9F930C1E49848200FBFEFB /* CafeILLungoCard.swift */,
+				2C9F930E1E49848B00FBFEFB /* CafeILLungoCard.xib */,
 				2C14FD9A1E445B00001B482F /* CafeDeNataCard.swift */,
 				2C14FD9C1E445B0D001B482F /* CafeDeNataCard.xib */,
 				2C14FD961E44537F001B482F /* DearBreadCard.swift */,
 				2C14FD981E445399001B482F /* DearBreadCard.xib */,
 				2C14FD921E44519F001B482F /* Do58Card.swift */,
 				2C14FD941E4451EB001B482F /* Do58Card.xib */,
+				2C9F92EE1E497A9600FBFEFB /* HyphenCard.swift */,
+				2C9F92F01E497A9D00FBFEFB /* HyphenCard.xib */,
+				2C9F92F21E497C4E00FBFEFB /* MoiritaCard.swift */,
+				2C9F92F41E497C5500FBFEFB /* MoiritaCard.xib */,
+				2C9F92F61E497D3500FBFEFB /* SandPressoCard.swift */,
+				2C9F92F81E497D3C00FBFEFB /* SandPressoCard.xib */,
 				2C14FD8E1E444A6C001B482F /* Gram14Card.swift */,
 				2C14FD901E444A85001B482F /* Gram14Card.xib */,
 				2C51FD2C1E41A60700D68B88 /* CardACell.swift */,
@@ -366,14 +402,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9F930F1E49848B00FBFEFB /* CafeILLungoCard.xib in Resources */,
+				2C9F930B1E49830800FBFEFB /* CafeMotungiCard.xib in Resources */,
 				2C14FD991E445399001B482F /* DearBreadCard.xib in Resources */,
+				2C9F92F11E497A9D00FBFEFB /* HyphenCard.xib in Resources */,
 				24AC38491E26214100EEC55B /* LaunchScreen.storyboard in Resources */,
 				2C51FD331E41A61C00D68B88 /* CardACell.xib in Resources */,
+				2C9F92F51E497C5500FBFEFB /* MoiritaCard.xib in Resources */,
 				2C14FD9D1E445B0D001B482F /* CafeDeNataCard.xib in Resources */,
 				24AC38461E26214100EEC55B /* Assets.xcassets in Resources */,
 				2C51FD351E41A61C00D68B88 /* CardBCell.xib in Resources */,
 				2C51FD411E41D64C00D68B88 /* Express103Card.xib in Resources */,
+				2C9F92F91E497D3C00FBFEFB /* SandPressoCard.xib in Resources */,
 				2C14FD911E444A85001B482F /* Gram14Card.xib in Resources */,
+				2C9F93031E4980ED00FBFEFB /* HandsomeCard.xib in Resources */,
 				24AC38441E26214100EEC55B /* Main.storyboard in Resources */,
 				2C14FD951E4451EB001B482F /* Do58Card.xib in Resources */,
 				2C51FD371E41A61C00D68B88 /* CardCCell.xib in Resources */,
@@ -452,6 +494,7 @@
 				24AC38C51E277A4600EEC55B /* CHPickerViewController.swift in Sources */,
 				24AC38C71E277A4600EEC55B /* FIlters.swift in Sources */,
 				2C7103081E372A4D00AC46BD /* CouponDatabase.swift in Sources */,
+				2C9F930D1E49848200FBFEFB /* CafeILLungoCard.swift in Sources */,
 				24AC38C21E277A4600EEC55B /* CHControls.swift in Sources */,
 				24AC38411E26214100EEC55B /* ViewController.swift in Sources */,
 				24AC38C41E277A4600EEC55B /* CHPagingScrollViewController.swift in Sources */,
@@ -463,16 +506,21 @@
 				24AC38C91E277A4600EEC55B /* RecordButton.swift in Sources */,
 				24AC38CA1E277A4600EEC55B /* UIViewController+Navigation.swift in Sources */,
 				2C51FD391E41A62500D68B88 /* SecondViewController.swift in Sources */,
+				2C9F93011E4980E500FBFEFB /* HandsomeCard.swift in Sources */,
 				2C51FD3F1E41D64200D68B88 /* Express103Card.swift in Sources */,
+				2C9F92F31E497C4E00FBFEFB /* MoiritaCard.swift in Sources */,
 				2C14FD9B1E445B00001B482F /* CafeDeNataCard.swift in Sources */,
 				24AC38C81E277A4600EEC55B /* NavigationControllers.swift in Sources */,
 				2C7103061E372A3000AC46BD /* CouponTableViewController.swift in Sources */,
 				2CD076341E486CD500CF1484 /* QRCodeViewController.swift in Sources */,
+				2C9F92F71E497D3500FBFEFB /* SandPressoCard.swift in Sources */,
 				24AC38C31E277A4600EEC55B /* CHModalViewController.swift in Sources */,
+				2C9F92EF1E497A9600FBFEFB /* HyphenCard.swift in Sources */,
 				2C14FD8F1E444A6C001B482F /* Gram14Card.swift in Sources */,
 				2C51FD2D1E41A60700D68B88 /* CardACell.swift in Sources */,
 				24AC38C61E277A4600EEC55B /* DrawingCanvasView.swift in Sources */,
 				2C14FD931E44519F001B482F /* Do58Card.swift in Sources */,
+				2C9F93091E49830300FBFEFB /* CafeMotungiCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

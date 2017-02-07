@@ -11,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Express103Card" customModule="Coupon_for_U_Anam" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CafeMotungiCard" customModule="Coupon_for_U_Anam" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_background" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-xE-QyE">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_background" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-xE-QyE">
                         <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103Express" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카페 모퉁이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
                         <rect key="frame" x="8" y="8" width="419" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="NG4-tx-R4J"/>
@@ -43,20 +43,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VJZ-YQ-oga">
                                 <rect key="frame" x="0.0" y="0.0" width="290" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-zK-gTy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-zK-gTy">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="BNC-OM-Zcj"/>
                                             <constraint firstAttribute="height" constant="65" id="QQ8-ts-Veo"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="dW5-GD-t8c">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="dW5-GD-t8c">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-1k-UiY">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-1k-UiY">
                                         <rect key="frame" x="150" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-HE-dXq">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-HE-dXq">
                                         <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
@@ -72,16 +72,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hnv-Ud-F3J">
                                 <rect key="frame" x="0.0" y="75" width="290" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-qF-wig">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-qF-wig">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hf-FWf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hf-FWf">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-Iq-13M">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_empty" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-Iq-13M">
                                         <rect key="frame" x="150" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-UU-wrJ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_empty" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-UU-wrJ">
                                         <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
@@ -97,10 +97,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zFq-se-SVy">
                                 <rect key="frame" x="0.0" y="150" width="140" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-zp-OTT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-zp-OTT">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-Kd-X7J">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motungi_empty" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-Kd-X7J">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
@@ -123,7 +123,7 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="980-SA-dDP"/>
+                            <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="bMZ-ey-zMH"/>
                         </connections>
                     </button>
                 </subviews>
@@ -147,15 +147,15 @@
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
-                <outlet property="imgV" destination="ZS9-xE-QyE" id="q8d-rK-BDI"/>
-                <outlet property="status" destination="AAl-uX-J9M" id="L05-Vj-hdd"/>
+                <outlet property="imgV" destination="ZS9-xE-QyE" id="E3G-oX-Pzr"/>
+                <outlet property="status" destination="AAl-uX-J9M" id="i8R-My-k3J"/>
             </connections>
             <point key="canvasLocation" x="112.5" y="226.5"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="103Express_background" width="1100" height="1700"/>
-        <image name="103Express_empty" width="200" height="200"/>
-        <image name="103Express_stamp" width="200" height="200"/>
+        <image name="motungi_background" width="1100" height="1700"/>
+        <image name="motungi_empty" width="200" height="200"/>
+        <image name="motungi_stamp" width="200" height="200"/>
     </resources>
 </document>

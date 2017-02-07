@@ -11,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Express103Card" customModule="Coupon_for_U_Anam" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MoiritaCard" customModule="Coupon_for_U_Anam" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_background" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-xE-QyE">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_background" translatesAutoresizingMaskIntoConstraints="NO" id="ZS9-xE-QyE">
                         <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103Express" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moirita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
                         <rect key="frame" x="8" y="8" width="419" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="NG4-tx-R4J"/>
@@ -43,20 +43,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VJZ-YQ-oga">
                                 <rect key="frame" x="0.0" y="0.0" width="290" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-zK-gTy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-zK-gTy">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="BNC-OM-Zcj"/>
                                             <constraint firstAttribute="height" constant="65" id="QQ8-ts-Veo"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="dW5-GD-t8c">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="dW5-GD-t8c">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-1k-UiY">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-1k-UiY">
                                         <rect key="frame" x="150" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-HE-dXq">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="TvI-HE-dXq">
                                         <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
@@ -72,16 +72,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hnv-Ud-F3J">
                                 <rect key="frame" x="0.0" y="75" width="290" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-qF-wig">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-qF-wig">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hf-FWf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hf-FWf">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-Iq-13M">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_empty" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-Iq-13M">
                                         <rect key="frame" x="150" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-UU-wrJ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_empty" translatesAutoresizingMaskIntoConstraints="NO" id="y4k-UU-wrJ">
                                         <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
@@ -95,18 +95,28 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zFq-se-SVy">
-                                <rect key="frame" x="0.0" y="150" width="140" height="65"/>
+                                <rect key="frame" x="0.0" y="150" width="290" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-zp-OTT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-zp-OTT">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-Kd-X7J">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_empty" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-Kd-X7J">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_empty" translatesAutoresizingMaskIntoConstraints="NO" id="cGQ-FV-f2v">
+                                        <rect key="frame" x="150" y="0.0" width="65" height="65"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moirita_empty" translatesAutoresizingMaskIntoConstraints="NO" id="1Hj-cf-bs4">
+                                        <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="cGQ-FV-f2v" firstAttribute="height" secondItem="Pe1-zp-OTT" secondAttribute="height" id="8aS-SI-a7N"/>
                                     <constraint firstItem="yAB-Kd-X7J" firstAttribute="height" secondItem="Pe1-zp-OTT" secondAttribute="height" id="DRC-EN-Cca"/>
+                                    <constraint firstItem="cGQ-FV-f2v" firstAttribute="width" secondItem="Pe1-zp-OTT" secondAttribute="width" id="Hh2-cc-e68"/>
+                                    <constraint firstItem="1Hj-cf-bs4" firstAttribute="height" secondItem="Pe1-zp-OTT" secondAttribute="height" id="OOf-hL-bBb"/>
                                     <constraint firstItem="yAB-Kd-X7J" firstAttribute="width" secondItem="Pe1-zp-OTT" secondAttribute="width" id="Qy8-u8-99d"/>
+                                    <constraint firstItem="1Hj-cf-bs4" firstAttribute="width" secondItem="Pe1-zp-OTT" secondAttribute="width" id="zpE-Ty-0ko"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -117,20 +127,19 @@
                             <constraint firstItem="8jE-qF-wig" firstAttribute="width" secondItem="0r5-zK-gTy" secondAttribute="width" id="pfj-QX-QUN"/>
                         </constraints>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvJ-pP-d4g">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri5-Lc-mMy">
                         <rect key="frame" x="376" y="351" width="51" height="30"/>
                         <state key="normal" title="remove">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="980-SA-dDP"/>
+                            <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="DsK-Rm-oeL"/>
                         </connections>
                     </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="gvJ-pP-d4g" secondAttribute="trailing" constant="8" id="4j5-ka-xih"/>
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
                 <constraint firstItem="yfH-zr-DiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I0w-C2-1xU"/>
@@ -139,23 +148,24 @@
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
+                <constraint firstAttribute="trailing" secondItem="ri5-Lc-mMy" secondAttribute="trailing" constant="8" id="cNv-C5-VU3"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
-                <constraint firstAttribute="bottom" secondItem="gvJ-pP-d4g" secondAttribute="bottom" constant="8" id="pSO-PA-sYG"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
+                <constraint firstAttribute="bottom" secondItem="ri5-Lc-mMy" secondAttribute="bottom" constant="8" id="x2t-oW-DLv"/>
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
-                <outlet property="imgV" destination="ZS9-xE-QyE" id="q8d-rK-BDI"/>
-                <outlet property="status" destination="AAl-uX-J9M" id="L05-Vj-hdd"/>
+                <outlet property="imgV" destination="ZS9-xE-QyE" id="42h-WE-BVP"/>
+                <outlet property="status" destination="AAl-uX-J9M" id="Jc9-Z8-6Tj"/>
             </connections>
             <point key="canvasLocation" x="112.5" y="226.5"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="103Express_background" width="1100" height="1700"/>
-        <image name="103Express_empty" width="200" height="200"/>
-        <image name="103Express_stamp" width="200" height="200"/>
+        <image name="moirita_background" width="1100" height="1700"/>
+        <image name="moirita_empty" width="200" height="200"/>
+        <image name="moirita_stamp" width="200" height="200"/>
     </resources>
 </document>

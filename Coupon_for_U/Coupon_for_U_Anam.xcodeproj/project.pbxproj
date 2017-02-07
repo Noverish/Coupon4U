@@ -59,6 +59,7 @@
 		2C9F93131E49A32200FBFEFB /* DeChocolateCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F93121E49A32200FBFEFB /* DeChocolateCard.xib */; };
 		2C9F93151E49A5F200FBFEFB /* MostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F93141E49A5F200FBFEFB /* MostCard.swift */; };
 		2C9F93171E49A5F700FBFEFB /* MostCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9F93161E49A5F700FBFEFB /* MostCard.xib */; };
+		2C9F931B1E49B7E800FBFEFB /* ServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F931A1E49B7E800FBFEFB /* ServerClient.swift */; };
 		2CD076341E486CD500CF1484 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD076331E486CD500CF1484 /* QRCodeViewController.swift */; };
 		38C586DE7D5C4D2AA39F11F2 /* Pods_Coupon_for_U_Anam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		2C9F93121E49A32200FBFEFB /* DeChocolateCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeChocolateCard.xib; sourceTree = "<group>"; };
 		2C9F93141E49A5F200FBFEFB /* MostCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostCard.swift; sourceTree = "<group>"; };
 		2C9F93161E49A5F700FBFEFB /* MostCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MostCard.xib; sourceTree = "<group>"; };
+		2C9F931A1E49B7E800FBFEFB /* ServerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerClient.swift; sourceTree = "<group>"; };
 		2CD076331E486CD500CF1484 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = ../QRCodeViewController.swift; sourceTree = "<group>"; };
 		9D04700B46BFA52D88258DA4 /* Pods-Coupon_for_U_Anam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coupon_for_U_Anam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coupon_for_U_Anam/Pods-Coupon_for_U_Anam.debug.xcconfig"; sourceTree = "<group>"; };
 		ACF69A712480753B4A5A3827 /* Pods_Coupon_for_U_Anam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coupon_for_U_Anam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				24AC384A1E26214100EEC55B /* Info.plist */,
 				2C7103051E372A3000AC46BD /* CouponTableViewController.swift */,
 				2C7103071E372A4D00AC46BD /* CouponDatabase.swift */,
+				2C9F931A1E49B7E800FBFEFB /* ServerClient.swift */,
 			);
 			path = Coupon_for_U_Anam;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				2C51FD2D1E41A60700D68B88 /* CardACell.swift in Sources */,
 				24AC38C61E277A4600EEC55B /* DrawingCanvasView.swift in Sources */,
 				2C14FD931E44519F001B482F /* Do58Card.swift in Sources */,
+				2C9F931B1E49B7E800FBFEFB /* ServerClient.swift in Sources */,
 				2C9F93091E49830300FBFEFB /* CafeMotungiCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

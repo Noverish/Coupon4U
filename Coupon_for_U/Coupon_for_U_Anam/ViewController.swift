@@ -8,7 +8,7 @@
 
 import UIKit
 import MMCardView
-class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate {
+class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate {
     @IBOutlet weak var card:CardView!
     
     @IBOutlet weak var tabBar: UITabBar!
@@ -33,6 +33,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         card.showStyle(style: .normal)
         
         tabBar.delegate = self;
+        tabBar.selectedItem = tabBar.items![2] as UITabBarItem
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -134,6 +135,10 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
     
     func delete() {
         card.removeSelectCard()
+    }
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
     }
 }
 

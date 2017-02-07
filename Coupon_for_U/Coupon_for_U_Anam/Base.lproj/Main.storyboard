@@ -331,7 +331,7 @@
                                 <items>
                                     <tabBarItem title="참살이" image="tab_icon_off" selectedImage="tab_icon_on" id="U22-pN-lMC"/>
                                     <tabBarItem title="정대후문" image="tab_icon_off" selectedImage="tab_icon_on" id="Ni6-IA-2i6"/>
-                                    <tabBarItem title="전체보기" id="FDp-aq-dTF"/>
+                                    <tabBarItem title="전체보기" image="eye_off" selectedImage="eye_on" id="FDp-aq-dTF"/>
                                     <tabBarItem title="정문" image="tab_icon_off" selectedImage="tab_icon_on" id="cER-9O-rh3"/>
                                     <tabBarItem title="이공캠" image="tab_icon_off" selectedImage="tab_icon_on" id="GUq-Ri-ZhA"/>
                                 </items>
@@ -527,6 +527,8 @@
         <image name="2017. 1. 5. 오후 5_22_18의 Scannable 문서" width="595" height="1071"/>
         <image name="2017. 1. 6. 오후 4_28_39의 영수증" width="593" height="1071"/>
         <image name="OpenCamera1" width="512" height="512"/>
+        <image name="eye_off" width="24" height="24"/>
+        <image name="eye_on" width="24" height="24"/>
         <image name="paging_1" width="485" height="872"/>
         <image name="tab_icon_off" width="24" height="24"/>
         <image name="tab_icon_on" width="24" height="24"/>

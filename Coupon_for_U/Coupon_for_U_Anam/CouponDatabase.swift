@@ -17,7 +17,7 @@ class CouponManager {
     
     var filePath:String { get{
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        return documentDirectory + fileName
+        return documentDirectory + "/" + fileName
         }}
     
     init() {
@@ -41,31 +41,24 @@ class CouponManager {
             getTemplate(storeName: "cafe motungi"),
             getTemplate(storeName: "14gram"),
             getTemplate(storeName: "DEAR BREAD"),
-//            getTemplate(storeName: "De Chocolate"),
+            getTemplate(storeName: "De Chocolate"),
             getTemplate(storeName: "58도씨"),
             getTemplate(storeName: "cafe de nata"),
-            getTemplate(storeName: "Cafe IL Luogo")
+            getTemplate(storeName: "Cafe IL Luogo"),
+            getTemplate(storeName: "most")
         ]
     }
     
     func defaultData() -> Array<Coupon> {
-        let couponList:[Coupon] = [
-            getTemplate(storeName: "103Express"),
-            getTemplate(storeName: "cafe de nata"),
-            getTemplate(storeName: "DEAR BREAD"),
-            getTemplate(storeName: "58도씨"),
-            getTemplate(storeName: "14gram"),
-            getTemplate(storeName: "Hyphen"),
-            getTemplate(storeName: "Moirita"),
-            getTemplate(storeName: "SandPresso"),
-            getTemplate(storeName: "HandsomeBagle")
-        ]
+        let couponList:[Coupon] = []
         
         return couponList
     }
     
     func save(){
-        NSKeyedArchiver.archiveRootObject(self.coupons, toFile: self.filePath)
+        let success = NSKeyedArchiver.archiveRootObject(self.coupons, toFile: self.filePath)
+        print(self.filePath)
+        print(success)
     }
     
     func getTemplate(storeName:String) -> Coupon {
@@ -79,10 +72,11 @@ class CouponManager {
         case "cafe motungi": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "cafe motungi", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "참살이")
         case "14gram": return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "정대후문")
         case "DEAR BREAD": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "정대후문")
-//        case "De Chocolate": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "정문")
+        case "De Chocolate": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "정문")
         case "58도씨": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "58도씨", checklist: [6: "Free Drink", 12: "Free Drink"], location: "참살이")
         case "cafe de nata": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "cafe de nata", checklist: [10: "Free Drink"], location: "참살이")
         case "Cafe IL Luogo": return Coupon(nowStamp: 0, maxStamp: 9, storeName: "Cafe IL Luogo", checklist: [9: "아메리카노"], location: "정대후문")
+        case "most": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "most", checklist: [10: "Free Drink"], location: "이공캠")
         default: return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "1234")
         }
     }
@@ -156,9 +150,9 @@ class Coupon : NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.favorite = aDecoder.decodeObject(forKey: "favorite") as! Bool
-        self.nowStamp = aDecoder.decodeObject(forKey: "nowStamp") as! Int
-        self.maxStamp = aDecoder.decodeObject(forKey: "maxStamp") as! Int
+        self.favorite = aDecoder.decodeBool(forKey: "favorite") 
+        self.nowStamp = aDecoder.decodeInteger(forKey: "nowStamp")
+        self.maxStamp = aDecoder.decodeInteger(forKey: "maxStamp") 
         self.storeName = aDecoder.decodeObject(forKey: "storeName") as! String
         self.checklist = aDecoder.decodeObject(forKey: "checklist") as! [Int:String]
         self.isRcvd = aDecoder.decodeObject(forKey: "isRcvd") as! [Int:Bool]

@@ -55,6 +55,7 @@ class CouponTableViewController: UITableViewController {
         print("coupon \(couponManager.coupons.count)")
         let coupon:Coupon = couponManager.couponTemplates[indexPath.row]
         couponManager.coupons.append(couponManager.getTemplate(storeName: coupon.storeName))
+        couponManager.save()
         
         print("coupon \(couponManager.coupons.count)")
         self.dismiss(animated: true, completion: nil)

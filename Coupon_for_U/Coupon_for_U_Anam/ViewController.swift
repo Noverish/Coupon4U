@@ -27,12 +27,22 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         card.registerCardCell(c: HandsomeCard.classForCoder(), nib: UINib.init(nibName: "HandsomeCard", bundle: nil))
         card.registerCardCell(c: CafeMotungiCard.classForCoder(), nib: UINib.init(nibName: "CafeMotungiCard", bundle: nil))
         card.registerCardCell(c: CafeILLungoCard.classForCoder(), nib: UINib.init(nibName: "CafeILLungoCard", bundle: nil))
+        card.registerCardCell(c: DeChocolateCard.classForCoder(), nib: UINib.init(nibName: "DeChocolateCard", bundle: nil))
+        card.registerCardCell(c: MostCard.classForCoder(), nib: UINib.init(nibName: "MostCard", bundle: nil))
         card.cardDataSource = self
-        card.showStyle(style: .cover)
-        refresh()
+        card.showStyle(style: .normal)
         
         tabBar.delegate = self;
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refresh()
+    }
+    
+    func refresh() {
+        let arr = self.generateCardInfo(cardCount: couponManager.coupons.count)
+        card.set(cards: arr)
     }
     
     func generateCardInfo (cardCount:Int) -> [AnyObject] {
@@ -94,6 +104,14 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
+        case let c as DeChocolateCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self                                                                                                 
+        case let c as MostCard:
+            c.coupon = coupon
+            c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
+            c.delegate = self
         default:
             return UICollectionViewCell()
             
@@ -112,17 +130,6 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
                 return couponManager.coupons[idex].location == title
             })
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func refresh() {
-        let arr = self.generateCardInfo(cardCount: couponManager.coupons.count)
-        card.set(cards: arr)
-        self.card.showStyle(style: .cover)
     }
     
     func delete() {

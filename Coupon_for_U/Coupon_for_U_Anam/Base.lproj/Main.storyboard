@@ -329,11 +329,11 @@
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="참살이" id="U22-pN-lMC"/>
-                                    <tabBarItem title="정대후문" id="Ni6-IA-2i6"/>
+                                    <tabBarItem title="참살이" image="tab_icon_off" selectedImage="tab_icon_on" id="U22-pN-lMC"/>
+                                    <tabBarItem title="정대후문" image="tab_icon_off" selectedImage="tab_icon_on" id="Ni6-IA-2i6"/>
                                     <tabBarItem title="전체보기" id="FDp-aq-dTF"/>
-                                    <tabBarItem title="정문" id="cER-9O-rh3"/>
-                                    <tabBarItem title="이공캠" id="GUq-Ri-ZhA"/>
+                                    <tabBarItem title="정문" image="tab_icon_off" selectedImage="tab_icon_on" id="cER-9O-rh3"/>
+                                    <tabBarItem title="이공캠" image="tab_icon_off" selectedImage="tab_icon_on" id="GUq-Ri-ZhA"/>
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8H-dt-mBr">
@@ -528,6 +528,8 @@
         <image name="2017. 1. 6. 오후 4_28_39의 영수증" width="593" height="1071"/>
         <image name="OpenCamera1" width="512" height="512"/>
         <image name="paging_1" width="485" height="872"/>
+        <image name="tab_icon_off" width="24" height="24"/>
+        <image name="tab_icon_on" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K38-2n-CWE"/>

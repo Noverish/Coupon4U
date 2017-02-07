@@ -8,8 +8,11 @@
 
 import UIKit
 import MMCardView
-class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate {
     @IBOutlet weak var card:CardView!
+    
+    @IBOutlet weak var tabBar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +28,10 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         card.registerCardCell(c: CafeMotungiCard.classForCoder(), nib: UINib.init(nibName: "CafeMotungiCard", bundle: nil))
         card.registerCardCell(c: CafeILLungoCard.classForCoder(), nib: UINib.init(nibName: "CafeILLungoCard", bundle: nil))
         card.cardDataSource = self
+        card.showStyle(style: .cover)
         refresh()
         
+        tabBar.delegate = self;
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -97,49 +102,16 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
         return cell
     }
     
-    @IBAction func filterAction () {
-        let sheet = UIAlertController.init(title: "Filter", message: "Select you want to show in View", preferredStyle: .actionSheet)
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        let title = item.title ?? "none"
         
-        let cellA = UIAlertAction(title: "1", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                print(String(idex) + " : " + couponManager.coupons[idex].storeName + ", " + String(couponManager.coupons[idex].location == "1"))
-                return couponManager.coupons[idex].location == "1"
-            })
-        })
-        
-        let cellB = UIAlertAction(title: "2", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            
-            self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                print(String(idex) + " : " + couponManager.coupons[idex].storeName + ", " + String(couponManager.coupons[idex].location == "2"))
-                return couponManager.coupons[idex].location == "2"
-            })
-        })
-        
-        let cellC = UIAlertAction(title: "3", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
-            self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
-                print(String(idex) + " : " + couponManager.coupons[idex].storeName + ", " + String(couponManager.coupons[idex].location == "3"))
-                return couponManager.coupons[idex].location == "3"
-            })
-        })
-        
-        let allCell = UIAlertAction(title: "모두 보기", style: .default, handler: {
-            (alert: UIAlertAction!) -> Void in
+        if(title == "전체보기" || title == "none") {
             self.card.showAllData()
-        })
-        
-        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: {
-            (alert: UIAlertAction!) -> Void in
-        })
-        
-        sheet.addAction(cellA)
-        sheet.addAction(cellB)
-        sheet.addAction(cellC)
-        sheet.addAction(allCell)
-        sheet.addAction(cancelAction)
-        self.present(sheet, animated: true, completion: nil)
+        } else {
+            self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
+                return couponManager.coupons[idex].location == title
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -41,7 +41,7 @@ class CouponManager {
             getTemplate(storeName: "cafe motungi"),
             getTemplate(storeName: "14gram"),
             getTemplate(storeName: "DEAR BREAD"),
-            getTemplate(storeName: "De Chocolate"),
+//            getTemplate(storeName: "De Chocolate"),
             getTemplate(storeName: "58도씨"),
             getTemplate(storeName: "cafe de nata"),
             getTemplate(storeName: "Cafe IL Luogo")
@@ -70,19 +70,19 @@ class CouponManager {
     
     func getTemplate(storeName:String) -> Coupon {
         switch storeName {
-        case "Hyphen": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Hyphen", checklist: [12: "Free Drink"], location: "1")
-//        case "Anouk": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "Anouk", checklist: [10: "Free Drink"], location: "2")
-        case "Moirita": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Moirita", checklist: [6: "아이스티 한 잔", 12: "에이드 두 잔"], location: "3")
-        case "SandPresso": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "SandPresso", checklist: [12: "Free Drink"], location: "2")
-        case "103Express": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "103Express", checklist: [10: "Free Coffee"], location: "3")
-        case "HandsomeBagle": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "HandsomeBagle", checklist: [10: "Free Bagle"], location: "1")
-        case "cafe motungi": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "cafe motungi", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "2")
-        case "14gram": return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "3")
-        case "DEAR BREAD": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "1")
-        case "De Chocolate": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "2")
-        case "58도씨": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "58도씨", checklist: [6: "Free Drink", 12: "Free Drink"], location: "2")
-        case "cafe de nata": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "cafe de nata", checklist: [10: "Free Drink"], location: "2")
-        case "Cafe IL Luogo": return Coupon(nowStamp: 0, maxStamp: 9, storeName: "Cafe IL Luogo", checklist: [9: "아메리카노"], location: "1")
+        case "Hyphen": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Hyphen", checklist: [12: "Free Drink"], location: "정문")
+//        case "Anouk": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "Anouk", checklist: [10: "Free Drink"], location: "정대후문")
+        case "Moirita": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Moirita", checklist: [6: "아이스티 한 잔", 12: "에이드 두 잔"], location: "참살이")
+        case "SandPresso": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "SandPresso", checklist: [12: "Free Drink"], location: "이공캠")
+        case "103Express": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "103Express", checklist: [10: "Free Coffee"], location: "정대후문")
+        case "HandsomeBagle": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "HandsomeBagle", checklist: [10: "Free Bagle"], location: "정대후문")
+        case "cafe motungi": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "cafe motungi", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "참살이")
+        case "14gram": return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "정대후문")
+        case "DEAR BREAD": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "정대후문")
+//        case "De Chocolate": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "정문")
+        case "58도씨": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "58도씨", checklist: [6: "Free Drink", 12: "Free Drink"], location: "참살이")
+        case "cafe de nata": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "cafe de nata", checklist: [10: "Free Drink"], location: "참살이")
+        case "Cafe IL Luogo": return Coupon(nowStamp: 0, maxStamp: 9, storeName: "Cafe IL Luogo", checklist: [9: "아메리카노"], location: "정대후문")
         default: return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "1234")
         }
     }

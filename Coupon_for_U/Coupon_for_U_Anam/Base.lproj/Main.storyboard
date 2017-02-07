@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbN-vk-zUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="442.12893553223392"/>
+            <point key="canvasLocation" x="2775.1999999999998" y="442.12893553223392"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XxN-VO-tqI">
@@ -227,7 +227,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTy-11-CRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-503" y="1067"/>
+            <point key="canvasLocation" x="436" y="1066.4167916041979"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mdB-Rl-co5">
@@ -258,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHi-mR-ko8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="1211.2443778110946"/>
+            <point key="canvasLocation" x="2775.1999999999998" y="1211.2443778110946"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="blg-IL-rb0">
@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlf-sR-Lti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2978.4000000000001" y="1042.128935532234"/>
+            <point key="canvasLocation" x="3917.5999999999999" y="1042.128935532234"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H6P-t8-f5a">
@@ -325,8 +325,19 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-02-sLE">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="참살이" id="U22-pN-lMC"/>
+                                    <tabBarItem title="정대후문" id="Ni6-IA-2i6"/>
+                                    <tabBarItem title="전체보기" id="FDp-aq-dTF"/>
+                                    <tabBarItem title="정문" id="cER-9O-rh3"/>
+                                    <tabBarItem title="이공캠" id="GUq-Ri-ZhA"/>
+                                </items>
+                            </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8H-dt-mBr">
-                                <rect key="frame" x="294" y="586" width="65" height="65"/>
+                                <rect key="frame" x="294" y="537" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="KCe-cs-uZM"/>
                                     <constraint firstAttribute="width" constant="65" id="kfs-Rj-Fcf"/>
@@ -339,12 +350,15 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8H-dt-mBr" secondAttribute="trailing" id="3FE-su-6mo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XRU-VJ-88e" secondAttribute="trailing" constant="-16" id="4d7-7b-9RO"/>
-                            <constraint firstItem="DUV-3g-zoo" firstAttribute="top" secondItem="m8H-dt-mBr" secondAttribute="bottom" constant="16" id="72C-dz-W00"/>
                             <constraint firstItem="XRU-VJ-88e" firstAttribute="leading" secondItem="2QZ-1R-Fa0" secondAttribute="leadingMargin" constant="-16" id="F9C-Qx-Ekv"/>
+                            <constraint firstItem="DUV-3g-zoo" firstAttribute="top" secondItem="jkj-02-sLE" secondAttribute="bottom" id="Hpr-Tx-gSv"/>
+                            <constraint firstItem="jkj-02-sLE" firstAttribute="top" secondItem="m8H-dt-mBr" secondAttribute="bottom" constant="16" id="VHG-La-RBm"/>
                             <constraint firstItem="DUV-3g-zoo" firstAttribute="top" secondItem="XRU-VJ-88e" secondAttribute="bottom" id="aCN-mf-hUn"/>
+                            <constraint firstAttribute="trailing" secondItem="jkj-02-sLE" secondAttribute="trailing" id="dBu-33-RxA"/>
                             <constraint firstItem="XRU-VJ-88e" firstAttribute="top" secondItem="BUM-eE-3v2" secondAttribute="bottom" id="eBu-Af-odF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m8H-dt-mBr" secondAttribute="trailing" id="lyN-rz-fus"/>
+                            <constraint firstItem="jkj-02-sLE" firstAttribute="leading" secondItem="2QZ-1R-Fa0" secondAttribute="leading" id="lJh-g0-nWZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Coupon4U" id="LBJ-lI-WPT">
@@ -353,31 +367,15 @@
                                 <segue destination="8RY-ok-b6d" kind="presentation" id="nmi-Mc-x2s"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="hqL-iT-o8q">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jxM-xb-4xl">
-                                <rect key="frame" x="250" y="7" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="FDX-zg-lOC"/>
-                                    <constraint firstAttribute="height" constant="30" id="yGI-7m-JgK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Filter">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="filterAction" destination="53J-v6-fXm" eventType="touchUpInside" id="wD3-TO-PfG"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="card" destination="XRU-VJ-88e" id="xKm-pP-nhO"/>
+                        <outlet property="tabBar" destination="jkj-02-sLE" id="L6L-dg-Bon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8d-e8-7At" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1328.8" y="1067.3163418290856"/>
+            <point key="canvasLocation" x="-389.60000000000002" y="1067.3163418290856"/>
         </scene>
         <!--Code View Controller-->
         <scene sceneID="ZvJ-cN-gMD">
@@ -463,10 +461,11 @@
             </objects>
             <point key="canvasLocation" x="-834" y="-869"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="ryF-f6-6Qp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gD2-KX-5Zi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ADa-kE-CYD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Iqw-4X-Rfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -479,7 +478,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkY-QR-KfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2268" y="1068.215892053973"/>
+            <point key="canvasLocation" x="-1328.8" y="1067.3163418290856"/>
         </scene>
     </scenes>
     <resources>

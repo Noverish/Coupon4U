@@ -17,6 +17,8 @@ class QRCodeViewController: UIViewController {
         
         scanner.prepareScan(view) { (stringValue) -> () in
             print(stringValue)
+            
+            self.navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
         }
         scanner.scanFrame = view.bounds

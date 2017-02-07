@@ -51,7 +51,6 @@ class CouponTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("section: \(indexPath.section)")
         print("row: \(indexPath.row)")
         print("coupon \(couponManager.coupons.count)")
         let coupon:Coupon = couponManager.couponTemplates[indexPath.row]

@@ -122,7 +122,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource,DeleteDeleg
     func refresh() {
         let arr = self.generateCardInfo(cardCount: couponManager.coupons.count)
         card.set(cards: arr)
-        self.card.showStyle(style: .normal)
+        self.card.showStyle(style: .cover)
     }
     
     func delete() {

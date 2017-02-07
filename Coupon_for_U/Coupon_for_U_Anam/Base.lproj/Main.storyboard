@@ -189,7 +189,7 @@
             <objects>
                 <tableViewController id="8RY-ok-b6d" customClass="CouponTableViewController" customModule="Coupon_for_U_Anam" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1zh-e5-gWV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -227,7 +227,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTy-11-CRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="1066.4167916041979"/>
+            <point key="canvasLocation" x="1135" y="1067"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mdB-Rl-co5">
@@ -344,7 +344,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="OpenCamera1"/>
                                 <connections>
-                                    <segue destination="uVW-dc-Bna" kind="presentation" id="jKu-B2-meM"/>
+                                    <segue destination="uVW-dc-Bna" kind="show" id="cw8-uC-pFP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -364,7 +364,7 @@
                     <navigationItem key="navigationItem" title="Coupon4U" id="LBJ-lI-WPT">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="9VV-XD-MGf">
                             <connections>
-                                <segue destination="8RY-ok-b6d" kind="presentation" id="nmi-Mc-x2s"/>
+                                <segue destination="8Al-py-oMq" kind="presentation" id="zRN-HT-5Zs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -376,6 +376,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8d-e8-7At" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-389.60000000000002" y="1067.3163418290856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Eoa-Vc-I08">
+            <objects>
+                <viewController id="8Al-py-oMq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AmF-pw-w0R"/>
+                        <viewControllerLayoutGuide type="bottom" id="MiJ-HI-f2R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wk2-p4-yUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTd-Mq-PHO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="8RY-ok-b6d" kind="embed" id="AxJ-cj-NKv"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4sT-lx-hx1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="쿠폰 추가" id="wkf-gp-c5M">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7QZ-97-fEk">
+                                            <connections>
+                                                <action selector="modalDismiss:" destination="8Al-py-oMq" id="ylD-EM-gYj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lG3-4i-6Wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="1066.4167916041979"/>
         </scene>
         <!--Code View Controller-->
         <scene sceneID="ZvJ-cN-gMD">

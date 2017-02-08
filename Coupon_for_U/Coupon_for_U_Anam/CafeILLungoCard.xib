@@ -22,8 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart (1)" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-xd-3xX">
+                        <rect key="frame" x="25" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="KeB-4W-IHn"/>
+                            <constraint firstAttribute="width" constant="25" id="ue0-5E-v0c"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe IL Luogo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
-                        <rect key="frame" x="8" y="8" width="419" height="40"/>
+                        <rect key="frame" x="65" y="8" width="362" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="NG4-tx-R4J"/>
                         </constraints>
@@ -132,6 +139,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
+                <constraint firstItem="9jZ-xd-3xX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="GTN-s8-Z0r"/>
                 <constraint firstItem="yfH-zr-DiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I0w-C2-1xU"/>
                 <constraint firstAttribute="trailing" secondItem="AAl-uX-J9M" secondAttribute="trailing" constant="24" id="PM3-kn-O1T"/>
                 <constraint firstAttribute="trailing" secondItem="ZS9-xE-QyE" secondAttribute="trailing" id="Pi1-1H-I09"/>
@@ -139,9 +147,10 @@
                 <constraint firstItem="gvJ-pP-d4g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="QSL-UH-8EB"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
+                <constraint firstItem="9jZ-xd-3xX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="cYu-8O-9Qo"/>
                 <constraint firstAttribute="bottom" secondItem="gvJ-pP-d4g" secondAttribute="bottom" constant="8" id="eXw-IT-VEt"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
-                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hm7-4x-4BL"/>
+                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstAttribute="bottom" secondItem="gvJ-pP-d4g" secondAttribute="bottom" constant="8" id="pSO-PA-sYG"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
@@ -169,5 +178,6 @@
         <image name="cafeDeNata_stamp" width="200" height="200"/>
         <image name="cafeIlLuogo_background" width="1100" height="1700"/>
         <image name="cafeIlLuogo_stamp" width="200" height="200"/>
+        <image name="heart (1)" width="24" height="24"/>
     </resources>
 </document>

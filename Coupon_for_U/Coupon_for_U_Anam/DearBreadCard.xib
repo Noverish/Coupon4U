@@ -23,7 +23,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEARBREAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
-                        <rect key="frame" x="8" y="8" width="419" height="40"/>
+                        <rect key="frame" x="65" y="8" width="362" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="NG4-tx-R4J"/>
                         </constraints>
@@ -126,14 +126,23 @@
                             <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="Gmx-In-SZw"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart (1)" translatesAutoresizingMaskIntoConstraints="NO" id="viX-0S-JBF">
+                        <rect key="frame" x="25" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="7Mw-uG-Rec"/>
+                            <constraint firstAttribute="height" constant="25" id="BUm-2H-6fi"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="fpN-xW-R6E" secondAttribute="bottom" constant="8" id="1sG-AI-18T"/>
+                <constraint firstItem="viX-0S-JBF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="6eH-Jp-wIH"/>
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
                 <constraint firstItem="yfH-zr-DiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I0w-C2-1xU"/>
+                <constraint firstItem="viX-0S-JBF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Kc0-ac-vH9"/>
                 <constraint firstAttribute="trailing" secondItem="AAl-uX-J9M" secondAttribute="trailing" constant="24" id="PM3-kn-O1T"/>
                 <constraint firstAttribute="trailing" secondItem="ZS9-xE-QyE" secondAttribute="trailing" id="Pi1-1H-I09"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
@@ -141,7 +150,7 @@
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
                 <constraint firstAttribute="bottom" secondItem="fpN-xW-R6E" secondAttribute="bottom" constant="8" id="ZTr-Jn-aJf"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
-                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hm7-4x-4BL"/>
+                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstItem="fpN-xW-R6E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="nqR-JR-F7w"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
@@ -168,5 +177,6 @@
         <image name="DearBread_background" width="1100" height="1700"/>
         <image name="DearBread_empty" width="200" height="200"/>
         <image name="DearBread_stamp" width="200" height="200"/>
+        <image name="heart (1)" width="24" height="24"/>
     </resources>
 </document>

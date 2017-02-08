@@ -23,7 +23,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58도씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
-                        <rect key="frame" x="8" y="8" width="419" height="40"/>
+                        <rect key="frame" x="65" y="8" width="362" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="NG4-tx-R4J"/>
                         </constraints>
@@ -136,6 +136,13 @@
                             <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="G3j-KH-G5N"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart (1)" translatesAutoresizingMaskIntoConstraints="NO" id="6JG-4X-Gux">
+                        <rect key="frame" x="25" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="AVA-OZ-MXf"/>
+                            <constraint firstAttribute="height" constant="25" id="Fcc-Oe-LG0"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,13 +155,15 @@
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
                 <constraint firstItem="ri5-Lc-mMy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="SG9-eb-FYY"/>
                 <constraint firstAttribute="bottom" secondItem="ri5-Lc-mMy" secondAttribute="bottom" constant="8" id="SQK-xt-HOu"/>
+                <constraint firstItem="6JG-4X-Gux" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="TU3-GM-Qi2"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
-                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hm7-4x-4BL"/>
+                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
                 <constraint firstAttribute="bottom" secondItem="ri5-Lc-mMy" secondAttribute="bottom" constant="8" id="x2t-oW-DLv"/>
+                <constraint firstItem="6JG-4X-Gux" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="zYK-af-D7a"/>
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
@@ -180,5 +189,6 @@
         <image name="58_background" width="1100" height="1700"/>
         <image name="58_empty" width="200" height="200"/>
         <image name="58_stamp" width="200" height="200"/>
+        <image name="heart (1)" width="24" height="24"/>
     </resources>
 </document>

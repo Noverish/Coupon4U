@@ -28,6 +28,8 @@ class MoiritaCard: CardCell,CardCellProtocol {
     @IBOutlet weak var img11: UIImageView!
     @IBOutlet weak var img12: UIImageView!
     
+    @IBOutlet weak var heart: UIButton!
+    
     public static func cellIdentifier() -> String {
         return "Moirita"
     }
@@ -48,6 +50,20 @@ class MoiritaCard: CardCell,CardCellProtocol {
         
         for i in 0...11{
             imgList[i].image = (i<nowstamp) ? UIImage(named: "moirita_stamp") : UIImage(named: "moirita_empty")
+        }
+    }
+    
+    @IBAction func heartClicked() {
+        coupon?.favorite = !(coupon?.favorite)!
+        
+        setHeart(flag: (coupon?.favorite)!)
+    }
+    
+    func setHeart(flag:Bool) {
+        if(flag) {
+            heart.setImage(UIImage(named: "heart"), for: UIControlState.normal)
+        } else {
+            heart.setImage(UIImage(named: "heart (1)"), for: UIControlState.normal)
         }
     }
 }

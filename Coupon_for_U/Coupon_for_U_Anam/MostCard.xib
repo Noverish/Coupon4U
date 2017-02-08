@@ -126,18 +126,21 @@
                             <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="ICA-wj-0c7"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-LY-gRi">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxo-nM-qJT">
                         <rect key="frame" x="25" y="16" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="PVQ-ko-gDN"/>
-                            <constraint firstAttribute="width" constant="25" id="s18-kj-pvG"/>
+                            <constraint firstAttribute="width" constant="25" id="9Nk-40-j2T"/>
+                            <constraint firstAttribute="height" constant="25" id="CPn-DK-4LA"/>
                         </constraints>
-                    </imageView>
+                        <state key="normal" image="heart (1)"/>
+                        <connections>
+                            <action selector="heartClicked" destination="gTV-IL-0wX" eventType="touchUpInside" id="tZ1-yv-r7T"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Dqf-LY-gRi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="5KN-fO-pDn"/>
                 <constraint firstAttribute="bottom" secondItem="u8B-Zr-Ixx" secondAttribute="bottom" constant="8" id="6WF-H6-kE5"/>
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
@@ -147,9 +150,10 @@
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
+                <constraint firstItem="kxo-nM-qJT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="X2Z-yG-3Gx"/>
                 <constraint firstItem="u8B-Zr-Ixx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="aPV-rv-xrW"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
-                <constraint firstItem="Dqf-LY-gRi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="hh4-bp-aUO"/>
+                <constraint firstItem="kxo-nM-qJT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="gyU-IN-Kqf"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstAttribute="bottom" secondItem="u8B-Zr-Ixx" secondAttribute="bottom" constant="8" id="rq9-lE-alM"/>
@@ -157,6 +161,7 @@
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="heart" destination="kxo-nM-qJT" id="7b6-Ra-Gma"/>
                 <outlet property="img01" destination="0r5-zK-gTy" id="Zhg-ep-Kb7"/>
                 <outlet property="img02" destination="dW5-GD-t8c" id="sxH-Aj-Y1D"/>
                 <outlet property="img03" destination="9k4-1k-UiY" id="crq-d1-lnY"/>

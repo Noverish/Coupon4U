@@ -22,13 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart (1)" translatesAutoresizingMaskIntoConstraints="NO" id="U7e-Td-281">
-                        <rect key="frame" x="25" y="16" width="25" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="25" id="9b6-a8-rPU"/>
-                            <constraint firstAttribute="height" constant="25" id="vSc-0R-sMK"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핸썸 베이글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
                         <rect key="frame" x="65" y="8" width="362" height="40"/>
                         <constraints>
@@ -138,16 +131,26 @@
                             </button>
                         </subviews>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhK-03-PTQ">
+                        <rect key="frame" x="25" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="cjf-Ip-bH7"/>
+                            <constraint firstAttribute="height" constant="25" id="qwL-Do-Ygq"/>
+                        </constraints>
+                        <state key="normal" image="heart (1)"/>
+                        <connections>
+                            <action selector="heartClicked" destination="gTV-IL-0wX" eventType="touchUpInside" id="64Q-ZF-39O"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="U7e-Td-281" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="8y2-bN-asF"/>
+                <constraint firstItem="qhK-03-PTQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="6zc-cb-MgO"/>
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
                 <constraint firstItem="WsQ-Eu-MPQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="GA9-u6-wWB"/>
                 <constraint firstItem="yfH-zr-DiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I0w-C2-1xU"/>
-                <constraint firstItem="U7e-Td-281" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="Jro-zJ-b3N"/>
                 <constraint firstAttribute="bottom" secondItem="WsQ-Eu-MPQ" secondAttribute="bottom" constant="8" id="MqK-AA-vHM"/>
                 <constraint firstAttribute="trailing" secondItem="AAl-uX-J9M" secondAttribute="trailing" constant="24" id="PM3-kn-O1T"/>
                 <constraint firstAttribute="trailing" secondItem="ZS9-xE-QyE" secondAttribute="trailing" id="Pi1-1H-I09"/>
@@ -155,12 +158,14 @@
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
+                <constraint firstItem="qhK-03-PTQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="gD2-eS-W5t"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="heart" destination="qhK-03-PTQ" id="G9q-Hp-jeo"/>
                 <outlet property="img01" destination="0r5-zK-gTy" id="hf2-Xv-uDO"/>
                 <outlet property="img02" destination="dW5-GD-t8c" id="pmz-uw-psR"/>
                 <outlet property="img03" destination="9k4-1k-UiY" id="RU7-QJ-Jx6"/>

@@ -23,7 +23,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moirita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
-                        <rect key="frame" x="8" y="8" width="419" height="40"/>
+                        <rect key="frame" x="65" y="8" width="362" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="NG4-tx-R4J"/>
                         </constraints>
@@ -136,6 +136,17 @@
                             <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="DsK-Rm-oeL"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2Q-q5-XQh">
+                        <rect key="frame" x="25" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="LrP-fg-6tf"/>
+                            <constraint firstAttribute="height" constant="25" id="jQd-M3-UzI"/>
+                        </constraints>
+                        <state key="normal" image="heart (1)"/>
+                        <connections>
+                            <action selector="heartClicked" destination="gTV-IL-0wX" eventType="touchUpInside" id="vkr-V1-sVQ"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,21 +154,24 @@
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
                 <constraint firstItem="yfH-zr-DiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I0w-C2-1xU"/>
+                <constraint firstItem="c2Q-q5-XQh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="OHd-a9-ZmA"/>
                 <constraint firstAttribute="trailing" secondItem="AAl-uX-J9M" secondAttribute="trailing" constant="24" id="PM3-kn-O1T"/>
                 <constraint firstAttribute="trailing" secondItem="ZS9-xE-QyE" secondAttribute="trailing" id="Pi1-1H-I09"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
                 <constraint firstAttribute="bottom" secondItem="ri5-Lc-mMy" secondAttribute="bottom" constant="8" id="RET-1m-YE0"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
+                <constraint firstItem="c2Q-q5-XQh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="e07-fF-pWn"/>
                 <constraint firstItem="ri5-Lc-mMy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="esH-51-KAk"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
-                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hm7-4x-4BL"/>
+                <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
                 <constraint firstAttribute="bottom" secondItem="ri5-Lc-mMy" secondAttribute="bottom" constant="8" id="x2t-oW-DLv"/>
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="heart" destination="c2Q-q5-XQh" id="mrg-66-Fqu"/>
                 <outlet property="img01" destination="0r5-zK-gTy" id="H0Z-SW-MjR"/>
                 <outlet property="img02" destination="dW5-GD-t8c" id="GId-dL-FX1"/>
                 <outlet property="img03" destination="9k4-1k-UiY" id="R0K-8i-iIJ"/>
@@ -177,6 +191,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="heart (1)" width="24" height="24"/>
         <image name="moirita_background" width="1100" height="1700"/>
         <image name="moirita_empty" width="200" height="200"/>
         <image name="moirita_stamp" width="200" height="200"/>

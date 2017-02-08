@@ -66,66 +66,79 @@ class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDele
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as Express103Card:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as Do58Card:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as DearBreadCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as CafeDeNataCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as HyphenCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as MoiritaCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as SandPressoCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as HandsomeCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as CafeMotungiCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as CafeILLungoCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as DeChocolateCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         case let c as MostCard:
             c.coupon = coupon
             c.status.text = String(coupon.nowStamp) + "/" + String(coupon.maxStamp)
             c.delegate = self
             c.setNowStamp(nowstamp: coupon.nowStamp)
+            c.setHeart(flag: coupon.favorite)
         default:
             return UICollectionViewCell()
             

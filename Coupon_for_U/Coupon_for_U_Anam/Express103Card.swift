@@ -27,7 +27,7 @@ class Express103Card: CardCell,CardCellProtocol {
     @IBOutlet weak var img09: UIImageView!
     @IBOutlet weak var img10: UIImageView!
     
-    
+    @IBOutlet weak var heart: UIButton!
     
     public static func cellIdentifier() -> String {
         return "103Express"
@@ -49,6 +49,20 @@ class Express103Card: CardCell,CardCellProtocol {
         
         for i in 0...9{
             imgList[i].image = (i<nowstamp) ? UIImage(named: "103Express_stamp") : UIImage(named: "103Express_empty")
+        }
+    }
+    
+    @IBAction func heartClicked() {
+        coupon?.favorite = !(coupon?.favorite)!
+        
+        setHeart(flag: (coupon?.favorite)!)
+    }
+    
+    func setHeart(flag:Bool) {
+        if(flag) {
+            heart.setImage(UIImage(named: "heart"), for: UIControlState.normal)
+        } else {
+            heart.setImage(UIImage(named: "heart (1)"), for: UIControlState.normal)
         }
     }
 }

@@ -22,13 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="435" height="389"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart (1)" translatesAutoresizingMaskIntoConstraints="NO" id="9jZ-xd-3xX">
-                        <rect key="frame" x="25" y="16" width="25" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="KeB-4W-IHn"/>
-                            <constraint firstAttribute="width" constant="25" id="ue0-5E-v0c"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe IL Luogo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="051-OX-oKZ">
                         <rect key="frame" x="65" y="8" width="362" height="40"/>
                         <constraints>
@@ -133,30 +126,42 @@
                             <action selector="clickAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="0oO-0o-KXB"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWt-Sp-rmn">
+                        <rect key="frame" x="25" y="16" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="CZM-sh-j6O"/>
+                            <constraint firstAttribute="height" constant="25" id="YjC-cV-Kkz"/>
+                        </constraints>
+                        <state key="normal" image="heart (1)"/>
+                        <connections>
+                            <action selector="heartClicked" destination="gTV-IL-0wX" eventType="touchUpInside" id="KGp-J2-yCS"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.90196078430000004" green="0.0" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="051-OX-oKZ" secondAttribute="trailing" constant="8" id="9A5-Xz-XIS"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="height" secondItem="051-OX-oKZ" secondAttribute="height" id="AoY-Zy-Siz"/>
-                <constraint firstItem="9jZ-xd-3xX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="GTN-s8-Z0r"/>
                 <constraint firstItem="yfH-zr-DiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="I0w-C2-1xU"/>
+                <constraint firstItem="aWt-Sp-rmn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="LTs-jZ-l07"/>
                 <constraint firstAttribute="trailing" secondItem="AAl-uX-J9M" secondAttribute="trailing" constant="24" id="PM3-kn-O1T"/>
                 <constraint firstAttribute="trailing" secondItem="ZS9-xE-QyE" secondAttribute="trailing" id="Pi1-1H-I09"/>
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
                 <constraint firstItem="gvJ-pP-d4g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="QSL-UH-8EB"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
-                <constraint firstItem="9jZ-xd-3xX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="cYu-8O-9Qo"/>
                 <constraint firstAttribute="bottom" secondItem="gvJ-pP-d4g" secondAttribute="bottom" constant="8" id="eXw-IT-VEt"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="65" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
                 <constraint firstAttribute="bottom" secondItem="gvJ-pP-d4g" secondAttribute="bottom" constant="8" id="pSO-PA-sYG"/>
+                <constraint firstItem="aWt-Sp-rmn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="rFe-8f-Foa"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="heart" destination="aWt-Sp-rmn" id="sV8-4V-zcv"/>
                 <outlet property="img01" destination="0r5-zK-gTy" id="mhn-5m-fCn"/>
                 <outlet property="img02" destination="dW5-GD-t8c" id="UNE-N6-9hw"/>
                 <outlet property="img03" destination="9k4-1k-UiY" id="mYI-0A-BGU"/>

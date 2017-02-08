@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,7 +75,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-qF-wig">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hf-FWf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="plg-hf-FWf">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="103Express_empty" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-Iq-13M">
@@ -147,6 +147,16 @@
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="img01" destination="0r5-zK-gTy" id="Qyc-bc-GGr"/>
+                <outlet property="img02" destination="dW5-GD-t8c" id="LG6-fo-iwr"/>
+                <outlet property="img03" destination="9k4-1k-UiY" id="rKw-aw-mcM"/>
+                <outlet property="img04" destination="TvI-HE-dXq" id="7f5-Q2-qJt"/>
+                <outlet property="img05" destination="8jE-qF-wig" id="VQg-zn-NeG"/>
+                <outlet property="img06" destination="plg-hf-FWf" id="s51-iY-5Kr"/>
+                <outlet property="img07" destination="MDU-Iq-13M" id="vfN-Ph-Uxh"/>
+                <outlet property="img08" destination="y4k-UU-wrJ" id="hh0-uF-TU6"/>
+                <outlet property="img09" destination="Pe1-zp-OTT" id="41M-ji-Y5i"/>
+                <outlet property="img10" destination="yAB-Kd-X7J" id="8ce-jM-8JP"/>
                 <outlet property="imgV" destination="ZS9-xE-QyE" id="q8d-rK-BDI"/>
                 <outlet property="status" destination="AAl-uX-J9M" id="L05-Vj-hdd"/>
             </connections>

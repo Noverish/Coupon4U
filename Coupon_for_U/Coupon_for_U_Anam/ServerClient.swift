@@ -11,6 +11,6 @@ import Foundation
 let serverClient:ServerClient = ServerClient()
 class ServerClient {
     func stamp(str:String) -> Coupon {
-        return couponManager.getTemplate(storeName: "103Express")
+        return couponManager.getTemplate(storeName: str)
     }
 }

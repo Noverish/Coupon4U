@@ -148,6 +148,16 @@
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="img01" destination="0r5-zK-gTy" id="13B-N7-5IV"/>
+                <outlet property="img02" destination="dW5-GD-t8c" id="bqG-Fr-iC7"/>
+                <outlet property="img03" destination="9k4-1k-UiY" id="IO2-fu-XI4"/>
+                <outlet property="img04" destination="TvI-HE-dXq" id="eWS-QG-ggp"/>
+                <outlet property="img05" destination="8jE-qF-wig" id="5vA-qP-dGb"/>
+                <outlet property="img06" destination="plg-hf-FWf" id="qdD-BO-9VD"/>
+                <outlet property="img07" destination="MDU-Iq-13M" id="v6Y-Wf-W6U"/>
+                <outlet property="img08" destination="y4k-UU-wrJ" id="1jf-bU-hWH"/>
+                <outlet property="img09" destination="Pe1-zp-OTT" id="VKW-iA-YBV"/>
+                <outlet property="img10" destination="yAB-Kd-X7J" id="tWT-B9-ceS"/>
                 <outlet property="imgV" destination="ZS9-xE-QyE" id="T8P-Ce-HmI"/>
                 <outlet property="status" destination="AAl-uX-J9M" id="C0y-sD-2R3"/>
             </connections>

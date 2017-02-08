@@ -158,6 +158,18 @@
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="img01" destination="0r5-zK-gTy" id="H0Z-SW-MjR"/>
+                <outlet property="img02" destination="dW5-GD-t8c" id="GId-dL-FX1"/>
+                <outlet property="img03" destination="9k4-1k-UiY" id="R0K-8i-iIJ"/>
+                <outlet property="img04" destination="TvI-HE-dXq" id="dRy-uM-i3Q"/>
+                <outlet property="img05" destination="8jE-qF-wig" id="aLi-UL-seP"/>
+                <outlet property="img06" destination="plg-hf-FWf" id="zVR-S2-rjn"/>
+                <outlet property="img07" destination="MDU-Iq-13M" id="gIk-ed-TLw"/>
+                <outlet property="img08" destination="y4k-UU-wrJ" id="XgC-1G-QdJ"/>
+                <outlet property="img09" destination="Pe1-zp-OTT" id="xH1-s9-DD0"/>
+                <outlet property="img10" destination="yAB-Kd-X7J" id="aSF-w0-bNg"/>
+                <outlet property="img11" destination="cGQ-FV-f2v" id="0Eq-Pk-7Um"/>
+                <outlet property="img12" destination="1Hj-cf-bs4" id="65x-Bo-7Vv"/>
                 <outlet property="imgV" destination="ZS9-xE-QyE" id="42h-WE-BVP"/>
                 <outlet property="status" destination="AAl-uX-J9M" id="Jc9-Z8-6Tj"/>
             </connections>

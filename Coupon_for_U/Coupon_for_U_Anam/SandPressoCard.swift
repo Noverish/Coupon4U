@@ -15,6 +15,19 @@ class SandPressoCard: CardCell,CardCellProtocol {
     @IBOutlet weak var imgV:UIImageView!
     @IBOutlet weak var status: UILabel!
     
+    @IBOutlet weak var img01: UIImageView!
+    @IBOutlet weak var img02: UIImageView!
+    @IBOutlet weak var img03: UIImageView!
+    @IBOutlet weak var img04: UIImageView!
+    @IBOutlet weak var img05: UIImageView!
+    @IBOutlet weak var img06: UIImageView!
+    @IBOutlet weak var img07: UIImageView!
+    @IBOutlet weak var img08: UIImageView!
+    @IBOutlet weak var img09: UIImageView!
+    @IBOutlet weak var img10: UIImageView!
+    @IBOutlet weak var img11: UIImageView!
+    @IBOutlet weak var img12: UIImageView!
+   
     public static func cellIdentifier() -> String {
         return "SandPresso"
     }
@@ -29,5 +42,12 @@ class SandPressoCard: CardCell,CardCellProtocol {
         imgV.clipsToBounds = true
         // Initialization code
     }
-
+    
+    func setNowStamp(nowstamp:Int) {
+        var imgList:[UIImageView] = [img01,img02,img03,img04,img05,img06,img07,img08,img09,img10,img11,img12]
+        
+        for i in 0...11{
+            imgList[i].image = (i<nowstamp) ? UIImage(named: "sandPresso_stamp") : UIImage(named: "sandPresso_empty")
+        }
+    }
 }

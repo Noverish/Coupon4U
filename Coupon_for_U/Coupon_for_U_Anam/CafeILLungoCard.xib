@@ -100,7 +100,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeDeNata_empty" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-zp-OTT">
                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeDeNata_empty" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-Kd-X7J">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafeIlLuogo_stamp" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-Kd-X7J">
                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                     </imageView>
                                 </subviews>
@@ -148,6 +148,16 @@
             </constraints>
             <size key="customSize" width="435" height="389"/>
             <connections>
+                <outlet property="img01" destination="0r5-zK-gTy" id="mhn-5m-fCn"/>
+                <outlet property="img02" destination="dW5-GD-t8c" id="UNE-N6-9hw"/>
+                <outlet property="img03" destination="9k4-1k-UiY" id="mYI-0A-BGU"/>
+                <outlet property="img04" destination="TvI-HE-dXq" id="qIL-cN-AN7"/>
+                <outlet property="img05" destination="8jE-qF-wig" id="Mpw-ez-0i2"/>
+                <outlet property="img06" destination="plg-hf-FWf" id="qm1-h0-bbC"/>
+                <outlet property="img07" destination="MDU-Iq-13M" id="f0v-wx-lug"/>
+                <outlet property="img08" destination="y4k-UU-wrJ" id="x9F-tR-KyJ"/>
+                <outlet property="img09" destination="Pe1-zp-OTT" id="QNh-ZE-oDm"/>
+                <outlet property="img10" destination="yAB-Kd-X7J" id="GAV-Ag-Aoq"/>
                 <outlet property="imgV" destination="ZS9-xE-QyE" id="UjT-2j-AOm"/>
                 <outlet property="status" destination="AAl-uX-J9M" id="hgV-i6-2VG"/>
             </connections>
@@ -158,5 +168,6 @@
         <image name="cafeDeNata_empty" width="200" height="200"/>
         <image name="cafeDeNata_stamp" width="200" height="200"/>
         <image name="cafeIlLuogo_background" width="1100" height="1700"/>
+        <image name="cafeIlLuogo_stamp" width="200" height="200"/>
     </resources>
 </document>

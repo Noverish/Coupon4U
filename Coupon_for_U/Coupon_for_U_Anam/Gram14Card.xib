@@ -144,8 +144,8 @@
                             <constraint firstItem="9JD-bV-Pvr" firstAttribute="height" secondItem="0r5-zK-gTy" secondAttribute="height" id="rgO-Gb-uh4"/>
                         </constraints>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvm-ZW-3JV">
-                        <rect key="frame" x="379" y="351" width="51" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvm-ZW-3JV">
+                        <rect key="frame" x="8" y="351" width="51" height="30"/>
                         <state key="normal" title="remove">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -166,10 +166,11 @@
                 <constraint firstItem="AAl-uX-J9M" firstAttribute="top" secondItem="051-OX-oKZ" secondAttribute="top" id="PlV-aq-kxJ"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UU7-Ey-YU7"/>
                 <constraint firstItem="ZS9-xE-QyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vil-Df-krX"/>
+                <constraint firstAttribute="bottom" secondItem="fvm-ZW-3JV" secondAttribute="bottom" constant="8" id="fMl-h8-eG5"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="fgY-fA-pDL"/>
                 <constraint firstItem="051-OX-oKZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hm7-4x-4BL"/>
                 <constraint firstAttribute="bottom" secondItem="yfH-zr-DiO" secondAttribute="bottom" constant="50" id="iId-JT-by9"/>
-                <constraint firstAttribute="trailing" secondItem="fvm-ZW-3JV" secondAttribute="trailing" constant="8" id="rpV-16-bjU"/>
+                <constraint firstItem="fvm-ZW-3JV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="lag-gF-zRE"/>
                 <constraint firstAttribute="bottom" secondItem="ZS9-xE-QyE" secondAttribute="bottom" id="wHo-0E-QRq"/>
             </constraints>
             <size key="customSize" width="435" height="389"/>

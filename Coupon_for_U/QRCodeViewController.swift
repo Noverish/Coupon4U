@@ -9,21 +9,21 @@
 import UIKit
 import SwiftQRCode
 class QRCodeViewController: UIViewController {
-
+    var delegate: UsedQRCode? = nil
     let scanner = QRCode()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scanner.prepareScan(view) { (stringValue) -> () in
-            print(stringValue)
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
             
             if let stamp = serverClient.stamp(str: stringValue) {
                 couponManager.addStamp(stamp: stamp)
+            } else {
+                self.delegate?.usedQRCode()
             }
-            
-            self.navigationController?.popViewController(animated: true)
-            self.dismiss(animated: true, completion: nil)
         }
         scanner.scanFrame = view.bounds
     }
@@ -51,4 +51,8 @@ class QRCodeViewController: UIViewController {
     }
     */
 
+}
+
+protocol UsedQRCode {
+    func usedQRCode()
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 import MMCardView
-class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate {
+class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate, UsedQRCode {
     @IBOutlet weak var card:CardView!
     
     @IBOutlet weak var tabBar: UITabBar!
@@ -163,6 +163,25 @@ class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDele
         couponManager.coupons.remove(at: card.currentIdx())
         couponManager.save()
         card.removeSelectCard() //순서 중요! 항상 위의 remove보다 밑에 있어야 함!
+    }
+    
+    @IBAction func photoButton() {
+        let myCamera = QRCodeViewController()
+        myCamera.delegate = self
+        
+        self.present(myCamera, animated: true)
+    }
+    
+    func usedQRCode() {
+        // create the alert
+        let alert = UIAlertController(title: "스탬프 찍기 실패", message: "이미 사용한 QR코드 입니다", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {

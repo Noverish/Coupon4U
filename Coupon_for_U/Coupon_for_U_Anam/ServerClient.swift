@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let serverClient:ServerClient = ServerClient()
 class ServerClient {

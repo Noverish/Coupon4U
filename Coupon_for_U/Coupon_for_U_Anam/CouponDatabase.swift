@@ -59,11 +59,13 @@ class CouponManager {
         for coupon in coupons {
             if(coupon.storeName == stamp.storeName) {
                 coupon.nowStamp += 1;
+                save()
                 return
             }
         }
         stamp.nowStamp = 1
         coupons.append(stamp)
+        save()
     }
     
     func save(){

@@ -10,7 +10,14 @@ import Foundation
 
 let serverClient:ServerClient = ServerClient()
 class ServerClient {
-    func stamp(str:String) -> Coupon {
-        return couponManager.getTemplate(storeName: str)
+    var used:[String] = []
+    
+    func stamp(str:String) -> Coupon? {
+        if(used.contains(str)) {
+            return nil
+        } else {
+            used.append(str)
+            return couponManager.getTemplate(storeName: (str.components(separatedBy: "_"))[0])
+        }
     }
 }

@@ -17,7 +17,11 @@ class QRCodeViewController: UIViewController {
         
         scanner.prepareScan(view) { (stringValue) -> () in
             print(stringValue)
-            couponManager.addStamp(stamp: serverClient.stamp(str: stringValue))
+            
+            if let stamp = serverClient.stamp(str: stringValue) {
+                couponManager.addStamp(stamp: stamp)
+            }
+            
             self.navigationController?.popViewController(animated: true)
             self.dismiss(animated: true, completion: nil)
         }

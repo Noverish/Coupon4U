@@ -1551,6 +1551,7 @@
 
 	ul.actions {
 		cursor: default;
+        text-align: center;
 	}
 
 		ul.actions li {

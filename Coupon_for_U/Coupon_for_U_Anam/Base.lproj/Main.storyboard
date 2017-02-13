@@ -509,7 +509,7 @@
         <!--Code View Controller-->
         <scene sceneID="ZvJ-cN-gMD">
             <objects>
-                <viewController id="uVW-dc-Bna" customClass="QRCodeViewController" customModule="Coupon_for_U_Anam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRCodeViewController" id="uVW-dc-Bna" customClass="QRCodeViewController" customModule="Coupon_for_U_Anam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q8y-ks-B1X"/>
                         <viewControllerLayoutGuide type="bottom" id="F9Q-eb-Ff9"/>

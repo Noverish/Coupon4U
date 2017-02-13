@@ -166,10 +166,9 @@ class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDele
     }
     
     @IBAction func photoButton() {
-        let myCamera = QRCodeViewController()
-        myCamera.delegate = self
-        
-        self.present(myCamera, animated: true)
+        let myCamera : AnyObject! = self.storyboard!.instantiateViewController(withIdentifier: "QRCodeViewController")
+        (myCamera as! QRCodeViewController).delegate = self
+        self.show(myCamera as! UIViewController, sender: myCamera)
     }
     
     func usedQRCode() {

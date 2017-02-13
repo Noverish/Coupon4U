@@ -18,7 +18,12 @@ class ServerClient {
             return nil
         } else {
             used.append(str)
-            return couponManager.getTemplate(storeName: (str.components(separatedBy: "_"))[0])
+            let tmp:Coupon = couponManager.getTemplate(storeName: (str.components(separatedBy: "_"))[0])
+            if(tmp.storeName == "Unknown") {
+                return nil
+            } else {
+                return tmp
+            }
         }
     }
 }

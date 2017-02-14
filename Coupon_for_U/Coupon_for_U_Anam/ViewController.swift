@@ -8,10 +8,13 @@
 
 import UIKit
 import MMCardView
-class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate, UsedQRCode {
+import CoreLocation
+class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDelegate ,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITabBarDelegate, UsedQRCode, CLLocationManagerDelegate {
     @IBOutlet weak var card:CardView!
     
     @IBOutlet weak var tabBar: UITabBar!
+    let locationManager = CLLocationManager()
+    var checkedStore:[Coupon] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,42 @@ class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDele
         tabBar.delegate = self;
         tabBar.selectedItem = tabBar.items![2] as UITabBarItem
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        
+        var near:[Coupon] = []
+        
+        for coupon in couponManager.coupons {
+            if coupon.isNear(lat: locValue.latitude, lng: locValue.longitude) {
+                print(coupon.storeName)
+                near.append(coupon)
+            }
+        }
+        
+        near = Array(Set(near).subtracting(checkedStore))
+        if(near.count != 0) {
+            checkedStore.append(near[0])
+            let alert = UIAlertController(title: "주변 카페 알림", message: "혹시 " + near[0].storeName + "에 계신가요?", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (uiAlertAction) in
+                self.card.filterAllDataWith(isInclued: { (idex, obj) -> Bool in
+                    return couponManager.coupons[idex].storeName == near[0].storeName
+                })
+            }))
+            alert.addAction(UIAlertAction(title: "NO", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

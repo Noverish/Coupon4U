@@ -76,21 +76,20 @@ class CouponManager {
     
     func getTemplate(storeName:String) -> Coupon {
         switch storeName {
-        case "Hyphen": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Hyphen", checklist: [12: "Free Drink"], location: "정문")
-//        case "Anouk": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "Anouk", checklist: [10: "Free Drink"], location: "정대후문")
-        case "Moirita": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Moirita", checklist: [6: "아이스티 한 잔", 12: "에이드 두 잔"], location: "참살이")
-        case "SandPresso": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "SandPresso", checklist: [12: "Free Drink"], location: "이공캠")
-        case "103Express": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "103Express", checklist: [10: "Free Coffee"], location: "정대후문")
-        case "HandsomeBagle": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "HandsomeBagle", checklist: [10: "Free Bagle"], location: "정대후문")
-        case "cafe motungi": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "cafe motungi", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "참살이")
-        case "14gram": return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "정대후문")
-        case "DEAR BREAD": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "정대후문")
-        case "De Chocolate": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "정문")
-        case "58도씨": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "58도씨", checklist: [6: "Free Drink", 12: "Free Drink"], location: "참살이")
-        case "cafe de nata": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "cafe de nata", checklist: [10: "Free Drink"], location: "참살이")
-        case "Cafe IL Luogo": return Coupon(nowStamp: 0, maxStamp: 9, storeName: "Cafe IL Luogo", checklist: [9: "아메리카노"], location: "정대후문")
-        case "most": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "most", checklist: [10: "Free Drink"], location: "이공캠")
-        default: return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "1234")
+        case "Hyphen": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Hyphen", checklist: [12: "Free Drink"], location: "정문", lat:37.586510, lng:127.032285)
+        case "Moirita": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "Moirita", checklist: [6: "아이스티 한 잔", 12: "에이드 두 잔"], location: "참살이", lat:37.585328, lng:127.029226)
+        case "SandPresso": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "SandPresso", checklist: [12: "Free Drink"], location: "이공캠", lat:37.584822, lng:127.026272)
+        case "103Express": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "103Express", checklist: [10: "Free Coffee"], location: "정대후문", lat:37.587304, lng:127.029648)
+        case "HandsomeBagle": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "HandsomeBagle", checklist: [10: "Free Bagle"], location: "정대후문", lat:37.587202, lng:127.028724)
+        case "cafe motungi": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "cafe motungi", checklist: [10: "아메리카노 1잔 또는 2500원 할인"], location: "참살이", lat:37.585138, lng:127.030360)
+        case "14gram": return Coupon(nowStamp: 0, maxStamp: 14, storeName: "14gram", checklist: [7: "Free Drink", 14:"Free Drink"], location: "정대후문", lat:37.586724, lng:127.029928)
+        case "DEAR BREAD": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "DEAR BREAD", checklist: [12: "5000원 할인"], location: "정대후문", lat:37.587287, lng:127.028695)
+        case "De Chocolate": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "De Chocolate", checklist: [12: "아메리카노"], dueDate: "2016-10-21", location: "정문", lat:37.588438, lng:127.033087)
+        case "58도씨": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "58도씨", checklist: [6: "Free Drink", 12: "Free Drink"], location: "참살이", lat:37.584367, lng:127.029757)
+        case "cafe de nata": return Coupon(nowStamp: 0, maxStamp: 12, storeName: "cafe de nata", checklist: [10: "Free Drink"], location: "참살이", lat:37.585818, lng:127.030687)
+        case "Cafe IL Luogo": return Coupon(nowStamp: 0, maxStamp: 9, storeName: "Cafe IL Luogo", checklist: [9: "아메리카노"], location: "정대후문", lat:37.586187, lng:127.024476)
+        case "most": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "most", checklist: [10: "Free Drink"], location: "이공캠", lat:37.584777, lng:127.026665)
+        default: return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "1234", lat:37.585217, lng:127.026899)
         }
     }
 }
@@ -104,21 +103,25 @@ class Coupon : NSObject, NSCoding {
     var isRcvd:[Int:Bool] = [:]
     var dueDate:String?
     var location:String
+    var lat:Double
+    var lng:Double
     
-    init(nowStamp:Int, maxStamp:Int, storeName:String, checklist:[Int:String], location:String) {
+    init(nowStamp:Int, maxStamp:Int, storeName:String, checklist:[Int:String], location:String, lat:Double, lng:Double) {
         self.favorite = false;
         self.nowStamp = nowStamp;
         self.maxStamp = maxStamp;
         self.storeName = storeName;
         self.checklist = checklist;
         self.location = location;
+        self.lat = lat;
+        self.lng = lng;
         
         for (num, _) in checklist {
             isRcvd[num] = false
         }
     }
     
-    init(nowStamp:Int, maxStamp:Int, storeName:String, checklist:[Int:String], isRcvd:[Int:Bool], location:String) {
+    init(nowStamp:Int, maxStamp:Int, storeName:String, checklist:[Int:String], isRcvd:[Int:Bool], location:String, lat:Double, lng:Double) {
         self.favorite = false;
         self.nowStamp = nowStamp;
         self.maxStamp = maxStamp;
@@ -126,9 +129,11 @@ class Coupon : NSObject, NSCoding {
         self.checklist = checklist;
         self.isRcvd = isRcvd;
         self.location = location;
+        self.lat = lat;
+        self.lng = lng;
     }
     
-    init(nowStamp:Int, maxStamp:Int, storeName:String, checklist:[Int:String], dueDate:String, location:String) {
+    init(nowStamp:Int, maxStamp:Int, storeName:String, checklist:[Int:String], dueDate:String, location:String, lat:Double, lng:Double) {
         self.favorite = false;
         self.nowStamp = nowStamp;
         self.maxStamp = maxStamp;
@@ -136,6 +141,8 @@ class Coupon : NSObject, NSCoding {
         self.checklist = checklist;
         self.dueDate = dueDate;
         self.location = location;
+        self.lat = lat;
+        self.lng = lng;
         
         for (num, _) in checklist {
             isRcvd[num] = false
@@ -171,6 +178,8 @@ class Coupon : NSObject, NSCoding {
         self.isRcvd = aDecoder.decodeObject(forKey: "isRcvd") as! [Int:Bool]
         self.dueDate = aDecoder.decodeObject(forKey: "dueDate") as! String?
         self.location = aDecoder.decodeObject(forKey: "location") as! String
+        self.lat = aDecoder.decodeDouble(forKey: "lat")
+        self.lng = aDecoder.decodeDouble(forKey: "lng")
     }
     
     func encode(with aCoder: NSCoder) {
@@ -182,5 +191,15 @@ class Coupon : NSObject, NSCoding {
         aCoder.encode(self.isRcvd, forKey:"isRcvd")
         aCoder.encode(self.dueDate, forKey:"dueDate")
         aCoder.encode(self.location, forKey:"location")
+        aCoder.encode(self.lat, forKey:"lat")
+        aCoder.encode(self.lng, forKey:"lng")
+    }
+    
+    func isNear(lat:Double, lng:Double) -> Bool {
+        print(storeName)
+        print(String(self.lat - lat) + " " + String(self.lng - lng))
+        print(sqrt(pow(self.lat - lat, 2) + pow(self.lng - lng, 2)))
+        
+        return sqrt(pow(self.lat - lat, 2) + pow(self.lng - lng, 2)) < 0.001
     }
 }

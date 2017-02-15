@@ -33,7 +33,6 @@ class CouponManager {
         
         couponTemplates = [
             getTemplate(storeName: "Hyphen"),
-//            getTemplate(storeName: "Anouk"),
             getTemplate(storeName: "Moirita"),
             getTemplate(storeName: "SandPresso"),
             getTemplate(storeName: "103Express"),
@@ -47,6 +46,8 @@ class CouponManager {
             getTemplate(storeName: "Cafe IL Luogo"),
             getTemplate(storeName: "most")
         ]
+        
+        sort()
     }
     
     func defaultData() -> Array<Coupon> {
@@ -65,6 +66,9 @@ class CouponManager {
         }
         stamp.nowStamp = 1
         coupons.append(stamp)
+        
+        sort()
+        
         save()
     }
     
@@ -90,6 +94,16 @@ class CouponManager {
         case "Cafe IL Luogo": return Coupon(nowStamp: 0, maxStamp: 9, storeName: "Cafe IL Luogo", checklist: [9: "아메리카노"], location: "정대후문", lat:37.586187, lng:127.024476)
         case "most": return Coupon(nowStamp: 0, maxStamp: 10, storeName: "most", checklist: [10: "Free Drink"], location: "이공캠", lat:37.584777, lng:127.026665)
         default: return Coupon(nowStamp: 0, maxStamp: 1, storeName: "Unknown", checklist: [1: "unknown"], location: "1234", lat:37.585217, lng:127.026899)
+        }
+    }
+    
+    func sort() {
+        coupons = coupons.sorted { (c1, c2) -> Bool in
+            if(c1.favorite != c2.favorite) {
+                return c1.favorite
+            } else {
+                return (c1.maxStamp - c1.nowStamp) < (c2.maxStamp - c2.nowStamp)
+            }
         }
     }
 }

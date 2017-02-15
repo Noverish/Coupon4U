@@ -81,6 +81,7 @@ class ViewController: UIViewController, CardCollectionViewDataSource, DeleteDele
     }
     
     func refresh() {
+        couponManager.sort()
         let arr = self.generateCardInfo(cardCount: couponManager.coupons.count)
         card.set(cards: arr)
     }
